@@ -1,4 +1,5 @@
-#+title: Personal Website and Blog
+#+title: Musings to Manage
+#+subtitle: Personal Website and Blog
 #+author: Nidish Narayanaa Balaji
 #+date: {{{time(%Y-%m-%d)}}}
 #+startup: indent
@@ -8,7 +9,20 @@
 #+html: <bibtex src="Publications.bib"></bibtex>
 
 * Personal Blog
+
+#+begin_lmargin
+#+begin_center
+#+attr_html: :style width:50%;text-align:center;
+This is my personal blog.
+You are welcome but if you're looking for the lab website, [[file:index.org][you can
+find it here]].
+#+end_center
+#+end_lmargin
+
 ** How I built my Academic Website Using Emacs Org-mode <2024-07-15 Mon>
+:PROPERTIES:
+:CUSTOM_ID: blog-creation
+:END:
 
 Now that I'm starting as an Assistant Professor at IIT-M (Dept. of
 Aerospace Engg.), I feel it makes sense for me to have a personal/lab

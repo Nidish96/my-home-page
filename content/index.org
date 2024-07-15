@@ -867,3 +867,19 @@ document.addEventListener('readystatechange', setupprofileimgs);
 setupprofileimgs();
 </script>
 #+end_export
+
+#+begin_export html
+<style>
+  h1::before {
+  background-image: url('/../images/iitm-logo.png');
+  background-size: 82px 86px;
+  display: block;
+  text-align: center;
+  align-content: center;
+  margin: auto auto auto auto;
+  width: 82px;
+  height: 86px;
+  content:"";
+  }
+</style>
+#+end_export

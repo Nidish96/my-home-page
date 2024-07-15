@@ -39,7 +39,7 @@
 				   "<div id=\"footer\">\n \
 				   <ul>\n<li><a href=\"/sitemap.html\" title=\"Sitemap\">Sitemap</a></li>\n \
 				   <li><a href=\"mailto:nidish@iitm.ac.in\" title=\"Email me at nidish@iitm.ac.in !\">Contact</a></li>\n \
-				   <li><a href=\"https://github.com/fniessen/org-html-themes\" title=\"CSS\"> \
+				   <li><a href=\"/personal.html#blog-creation\" title=\"CSS\"> \
 				   Like this CSS?</a></li>\n \
 				   </ul>\n </div>\n\n \
 				   <p class=\"creator\" style=\"font-size:9px;\">Created using %c.</p>\n \
