@@ -1,0 +1,6 @@
+/.packages/
+*~
+/public/
+/content/auto/
+/content/ltximg/
+*org_archive

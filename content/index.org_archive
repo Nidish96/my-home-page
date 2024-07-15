@@ -1,0 +1,132 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/nidish/HomePage/my-home-page/content/index.org
+
+
+* Studi 1
+:PROPERTIES:
+:ARCHIVE_TIME: 2024-07-15 Mon 12:25
+:ARCHIVE_FILE: ~/HomePage/my-home-page/content/index.org
+:ARCHIVE_OLPATH: Members/Students
+:ARCHIVE_CATEGORY: index
+:END:
+#+attr_html: :class profile
+[[file:images/me2c_apr2024.png]]
+
+#+begin_profile
+Assistant Professor in the [[http://www.ae.iitm.ac.in/][Aerospace Engineering Department]] at
+IIT-Madras since 2024.
+
+*Educational Background:*
++ B.Tech. in Aerospace Engineering (2013-2017): [[https://www.iist.ac.in/][Indian Institute of Space Science
+  and Technology, Thiruvananthapuram, IN]]. 
++ M.S. and PhD. in Mechanical Engineering (2017-2021): [[https://www.rice.edu/][Rice Universit,
+  Houston, TX, USA]].
++ Postdoc 1 at [[https://www.rice.edu/][Rice]] (2021-2022).
++ [[https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship][Humboldt postdoctoral researcher]] at the [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][University of Stuttgart
+  (ILA)]] (2022-2024).
+#+end_profile
+
+#+begin_src inline-js
+  function underlinemyname() {
+      // Underline my Name in the text
+      var strs = $('.author');
+      var myname = ['Nidish Narayanaa Balaji', 'Balaji, Nidish Narayanaa'];
+      // var regex = [new RegExp(myname[0], 'gi'), new RegExp(myname[1], 'gi')]
+
+      var originalText;
+      var underlinedText;
+      for (var i = 0; i < strs.length; i++) {
+          originalText = strs[i].textContent;
+          for (var j = 0; j < myname.length; j++) {
+              if (originalText.search(`<u><b>${myname[j]}</b></u>`)==-1) {
+                  underlinedText = originalText.replace(myname[j],
+                                                        `<u><b>${myname[j]}</b></u>`);
+              }
+              originalText = underlinedText;
+          }
+          strs[i].innerHTML = underlinedText;
+      }
+      // console.log('hey')
+  }
+  document.addEventListener("click", underlinemyname);
+  document.addEventListener("keypress", underlinemyname);
+
+  document.onkeypress = function (event) {    
+      if (event.target.tagName.toLowerCase() !== 'input') {orgDefkey(event);}
+  };
+
+  document.addEventListener('readystatechange', setupprofileimgs);
+  setupprofileimgs();
+
+  document.addEventListener('DOMContentLoaded', function() {
+      var lnks = document.querySelectorAll('a');
+      var tmp = Array.from(lnks).filter(lnk => lnk.getAttribute('href'));
+      var llnks = tmp.filter(lnk => lnk.getAttribute('href').startsWith('#'));
+      llnks = llnks.filter(lnk => lnk.children.length!=0);
+
+      llnks.forEach(lnk => lnk.addEventListener('click', function(ev) {
+          var tgt = $(ev.target.parentElement.getAttribute('href'))[0];
+          tgt.style.background = 'yellow';
+
+          console.log('clicked!');
+
+          // setTimeout(() => {tgt.style.background='';}, 150);
+      }));
+
+      console.log('hello');
+  });
+#+end_src
+
+#+RESULTS:
+#+begin_export html
+<script type="text/javascript">
+function underlinemyname() {
+    // Underline my Name in the text
+    var strs = $('.author');
+    var myname = ['Nidish Narayanaa Balaji', 'Balaji, Nidish Narayanaa'];
+    // var regex = [new RegExp(myname[0], 'gi'), new RegExp(myname[1], 'gi')]
+
+    var originalText;
+    var underlinedText;
+    for (var i = 0; i < strs.length; i++) {
+        originalText = strs[i].textContent;
+        for (var j = 0; j < myname.length; j++) {
+            if (originalText.search(`<u><b>${myname[j]}</b></u>`)==-1) {
+                underlinedText = originalText.replace(myname[j],
+                                                      `<u><b>${myname[j]}</b></u>`);
+            }
+            originalText = underlinedText;
+        }
+        strs[i].innerHTML = underlinedText;
+    }
+    // console.log('hey')
+}
+document.addEventListener("click", underlinemyname);
+document.addEventListener("keypress", underlinemyname);
+
+document.onkeypress = function (event) {    
+    if (event.target.tagName.toLowerCase() !== 'input') {orgDefkey(event);}
+};
+
+document.addEventListener('readystatechange', setupprofileimgs);
+setupprofileimgs();
+
+document.addEventListener('DOMContentLoaded', function() {
+    var lnks = document.querySelectorAll('a');
+    var tmp = Array.from(lnks).filter(lnk => lnk.getAttribute('href'));
+    var llnks = tmp.filter(lnk => lnk.getAttribute('href').startsWith('#'));
+    llnks = llnks.filter(lnk => lnk.children.length!=0);
+
+    llnks.forEach(lnk => lnk.addEventListener('click', function(ev) {
+        var tgt = $(ev.target.parentElement.getAttribute('href'))[0];
+        tgt.style.background = 'yellow';
+
+        console.log('clicked!');
+
+        // setTimeout(() => {tgt.style.background='';}, 150);
+    }));
+});
+</script>
+#+end_export

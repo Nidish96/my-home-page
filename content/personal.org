@@ -1,0 +1,112 @@
+#+title: Personal Website and Blog
+#+author: Nidish Narayanaa Balaji
+#+date: {{{time(%Y-%m-%d)}}}
+#+startup: indent
+#+html_head_extra: <style>*{font-size: 15px;}</style>
+#+setupfile: ./theme.setup
+
+#+html: <bibtex src="Publications.bib"></bibtex>
+
+* Personal Blog
+** How I built my Academic Website Using Emacs Org-mode <2024-07-15 Mon>
+
+Now that I'm starting as an Assistant Professor at IIT-M (Dept. of
+Aerospace Engg.), I feel it makes sense for me to have a personal/lab
+website.
+
+As a student I always appreciated it when my professors had
+a decently updated website online that I can use to read about his/her
+work. More than anybody else, my website is aimed primarily to attract
+prospective students. I will try to consciously maintain the website
+and keep it up to date so students can get an idea of the
+research/teaching I'm involved in.
+
+*** Some background
+
+_You can safely skip this section if you're only here for the
+technical content._ 
+
+Being an Emacs user of ~8 years, I am now completely convinced of
+using [[https://orgmode.org/][Org-mode]] for "seamless" web development. Although I have pretty
+decent programming skills, all of these have so far been oriented
+towards scientific programming and I have never cared to learn much in
+the way of web-development.
+
+I started learning the basics of html-css-javascript and realized
+there's _really nothing to learn_, as far as my purposes (hosting a
+static website) and I could just get started already. The first thing
+I had to understand was the whole html-css-javascript
+framework. Learning a little bit of vanilla javascript was
+helpful. And <f12> on modern web browsers gives basically all we need
+in terms of an interactive environment for development.
+
+*** A Brief Overview of my Static Site Creation Process
+
+Since I'm not really interested in creating completely new
+css-javascript styling, I am using [[https://github.com/fniessen/org-html-themes][the amazing work]] by user fniessen
+on Github as a springing board. I specifically love the Bigblow theme
+and decided to modify the css to suit my needs appropriately.
+
+Modification of the CSS ended up being the most frustrating part of
+the process - thankfully a good highschool friend of mine, _Arjun Ram_
+(who works at [[https://carmen.sg/][Carmen Automotives pvt ltd.]]), gave me a hand at
+this. This is the part that felt like it really requires "knowledge" -
+most of everything else can be hacked at quite simply.
+#+begin_rmargin
+I was also told that using javascript frameworks is the way people
+develop fancy websites these days. I didn't feel a need for this in my
+workflow and with the interest of keeping things simple, both for
+development and maintenance, I've decided against it. The only
+"framework" I'm using is [[https://jquery.com/][jquery]] and a few plugins. 
+#+end_rmargin
+
+Once this was done, I was able to use javascript quite easily to put
+together the features I needed. Bigblow uses [[https://jquery.com/][jquery]] and a few plugins
+by default, so I'm sticking with this. I also found [[https://github.com/pcooksey/bibtex-js][BibTeX-js]], a
+javascript library that parses bib files to create organized and
+searchable lists of publications ([[file:index.org::#sec-publications][see the output here]]).
+
+The main additions I've added are:
++ Some javascript code to underline occurrences of my name in the
+  publication list;
++ "lmargin" and "rmargin" classes to put content in the left and right
+  margins (an inspiration from [[https://edwardtufte.github.io/tufte-css/][Edward Tufte]]);
++ Setting up a "profile card" for students (this possibly requires
+  more tuning);
++ Transient highlighting of the target of a link once clicked.
+
+*** Outro
+
+Obviously what I have so far is very rudimentary in terms of styling,
+but I have a pretty organic feel about it. I hope I continue
+maintiaining it and it really serves the purpose I want it to.
+
+I've created [[file:index.org][a lab website]] and [[file:personal.org][this personal website]]. I hope to keep
+the former updated with my academic activities and use this for
+personal blogs and writing in general.
+
+Last but not the least, I'm hosting this all openly on Github 
+
+* Pedagogy
+:PROPERTIES:
+:CUSTOM_ID: sec-pedagogy
+:END:
+
+** AS3020: Aerospace Structures
+*** Terms Taught
+1. Jul-Nov 2024
+
+*** Course Content
++ Determination of loads acting on major airplane components (wing, fuselage, tails).
++ Analysis of wings.
+  + Shear centre.
+  + Bending and torsion of closed and open tubes.
+  + Multi-cell tubes.
+  + Columns and beam-columns.
+  + Bending and buckling of plates and sheet stringer combination.
++ Analysis of fuselage.
+  + Learn about the main aircraft structural components, to introduce the concept of semi-monocoque construction in aircraft, discuss different loads acting on an aircraft, concept of airworthiness and generation of a safety-flight envelope (known as ‘V-n’ diagram).
+  + Modelling the components in terms of 1-D or 2-D structural elements.
+  + Analysis of thin-walled open and closed section beams under bending, shear and torsional loads.
+  + Bending and buckling of plates and sheet-stiffener combination.
++ Structural idealization of wings and fuselage and preliminary analysis.
