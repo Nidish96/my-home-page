@@ -880,15 +880,3 @@ p.verse {
     height: 70px;
     margin: -15px 0 0 -22px;
 }
-
-h1::before {
-    background-image: url('/../images/iitm-logo.png');
-    background-size: 82px 86px;
-    display: block;
-    text-align: center;
-    align-content: center;
-    margin: auto auto auto auto;
-    width: 82px;
-    height: 86px;
-    content:"";
-}
