@@ -1,0 +1,4 @@
+#+TITLE: Sitemap for project ViND Lab Site
+
+- [[file:personal.org][Personal Website and Blog]]
+- [[file:index.org][Vibrations and Nonlinear Dynamics Laboratory, IIT-Madras]]
