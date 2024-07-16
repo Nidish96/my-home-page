@@ -1,4 +1,5 @@
 #+title: Vibrations and Nonlinear Dynamics Laboratory, IIT-Madras
+#+subtitle: Lab Research Website
 #+author: Nidish Narayanaa Balaji
 #+date: {{{time(%Y-%m-%d)}}}
 #+startup: indent
@@ -718,28 +719,17 @@ IIT-Madras since 2024. [[file:personal.org][Link to Personal Website]].
   and Technology, Thiruvananthapuram, IN]]. 
 + M.S. and PhD. in Mechanical Engineering (2017-2021): [[https://www.rice.edu/][Rice Universit,
   Houston, TX, USA]].
-+ Postdoc 1 at [[https://www.rice.edu/][Rice]] (2021-2022).
++ Postdoctoral researcher at [[https://www.rice.edu/][Rice University]] Mechanical Engineering (2021-2022).
 + [[https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship][Humboldt postdoctoral researcher]] at the [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][University of Stuttgart
   (ILA)]] (2022-2024).
+
+*Contact Details*
++ *Email*: [[mailto:nidish@iitm.ac.in][nidish@iitm.ac.in]]
++ *Office*: Room 139, Department of Aerospace Engineering
++ *Phone*: TBA
 #+end_profile  
 ** Students
-*** Studi 1
-#+attr_html: :class profile
-[[file:images/me2c_apr2024.png]]
-
-#+begin_profile
-Assistant Professor in the [[http://www.ae.iitm.ac.in/][Aerospace Engineering Department]] at
-IIT-Madras since 2024.
-
-*Educational Background:*
-+ B.Tech. in Aerospace Engineering (2013-2017): [[https://www.iist.ac.in/][Indian Institute of Space Science
-  and Technology, Thiruvananthapuram, IN]]. 
-+ M.S. and PhD. in Mechanical Engineering (2017-2021): [[https://www.rice.edu/][Rice Universit,
-  Houston, TX, USA]].
-+ Postdoc 1 at [[https://www.rice.edu/][Rice]] (2021-2022).
-+ [[https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship][Humboldt postdoctoral researcher]] at the [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][University of Stuttgart
-  (ILA)]] (2022-2024).
-#+end_profile
+Applications welcome! [[mailto:nidish@iitm.ac.in][Just email me!]]
 
 #+begin_src inline-js
   // Underline my name in bib
@@ -787,86 +777,7 @@ IIT-Madras since 2024.
   window.addEventListener('resize', setupprofileimgs);
   document.addEventListener('readystatechange', setupprofileimgs);
   setupprofileimgs();
-
-  // Link target highligting
-  document.addEventListener('readystatechange', function() {
-      var lnks = document.querySelectorAll('a');
-      var tmp = Array.from(lnks).filter(lnk => lnk.getAttribute('href'));
-      var llnks = tmp.filter(lnk => lnk.getAttribute('href').startsWith('#'));
-      // llnks = llnks.filter(lnk => lnk.children.length!=0);
-
-      llnks.forEach(lnk => lnk.addEventListener('click', function(ev) {
-          if (ev.target.getAttribute('href')) {
-              var src = ev.target;
-          } else {
-              var src = ev.target.parentElement;
-          }
-
-          var tgt = $(src.getAttribute('href'))[0];
-          tgt.style.background = 'yellow';
-          tgt.style.filter = 'brightness(200%)';
-          tgt.style.transition = 'all 0.5s linear';
-
-          // console.log('clicked!');
-
-          setTimeout(function() {
-              tgt.style.background = '';
-              tgt.style.filter = 'brightness(100%)';
-          }, 500);
-      }));
-  });
 #+end_src
-
-#+RESULTS:
-#+begin_export html
-<script type="text/javascript">
-// Underline my name in bib
-function underlinemyname() {
-    // Underline my Name in the text
-    var strs = $('.author');
-    var myname = ['Nidish Narayanaa Balaji', 'Balaji, Nidish Narayanaa'];
-    // var regex = [new RegExp(myname[0], 'gi'), new RegExp(myname[1], 'gi')]
-
-    var originalText;
-    var underlinedText;
-    for (var i = 0; i < strs.length; i++) {
-        originalText = strs[i].textContent;
-        for (var j = 0; j < myname.length; j++) {
-            if (originalText.search(`<u><b>${myname[j]}</b></u>`)==-1) {
-                underlinedText = originalText.replace(myname[j],
-                                                      `<u><b>${myname[j]}</b></u>`);
-            }
-            originalText = underlinedText;
-        }
-        strs[i].innerHTML = underlinedText;
-    }
-    // console.log('hey')
-}
-document.addEventListener("click", underlinemyname);
-document.addEventListener("keypress", underlinemyname);
-
-// document.onkeypress = function (event) {    
-//     if (event.target.tagName.toLowerCase() !== 'input') {orgDefkey(event);}
-// };
-
-// Profile images
-function setupprofileimgs()
-{
-    var pmgs = $('img.profile');
-    for (var i = 0; i < pmgs.length; i++) {
-        var hgt = pmgs[i].parentElement.parentElement.nextElementSibling.offsetHeight;
-        pmgs[i].style.setProperty("height", hgt + "px");
-        pmgs[i].style.setProperty("float", "left");
-        pmgs[i].style.setProperty("clear", "left");
-        pmgs[i].style.setProperty("margin-left",
-                                  "-" + 1.1*pmgs[i].offsetWidth + "px");
-    }
-}
-window.addEventListener('resize', setupprofileimgs);
-document.addEventListener('readystatechange', setupprofileimgs);
-setupprofileimgs();
-</script>
-#+end_export
 
 #+begin_export html
 <style>

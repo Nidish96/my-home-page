@@ -10,8 +10,11 @@ document.addEventListener('readystatechange', function() {
         } else {
             var src = ev.target.parentElement;
         }
-
         var tgt = $(src.getAttribute('href'))[0];
+	while (tgt.childElementCount>0) {
+	    tgt = tgt.children[0];
+	}
+	
         tgt.style.background = 'yellow';
         tgt.style.filter = 'brightness(200%)';
         tgt.style.transition = 'all 0.5s linear';
