@@ -4,6 +4,7 @@
 #+date: {{{time(%Y-%m-%d)}}}
 #+startup: indent
 #+html_head_extra: <style>*{font-size: 15px;}</style>
+#+html_head_extra: <meta name="viewport" content="width=1024">
 #+setupfile: ./theme.setup
 
 #+html: <bibtex src="Publications.bib"></bibtex>

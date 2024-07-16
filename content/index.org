@@ -4,6 +4,7 @@
 #+date: {{{time(%Y-%m-%d)}}}
 #+startup: indent
 #+html_head_extra: <style>*{font-size: 15px;}</style>
+#+html_head_extra: <meta name="viewport" content="width=1024">
 #+setupfile: ./theme.setup
 
 #+html: <bibtex src="Publications.bib"></bibtex>
@@ -729,7 +730,7 @@ IIT-Madras since 2024. [[file:personal.org][Link to Personal Website]].
 + *Phone*: TBA
 #+end_profile  
 ** Students
-Applications welcome! [[mailto:nidish@iitm.ac.in][Just email me!]]
+Applications welcome - [[mailto:nidish@iitm.ac.in][Just email me!]]
 
 #+begin_src inline-js
   // Underline my name in bib
