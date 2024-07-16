@@ -782,7 +782,7 @@ Applications welcome! [[mailto:nidish@iitm.ac.in][Just email me!]]
 #+begin_export html
 <style>
   h1::before {
-  background-image: url('/../images/iitm-logo.png');
+  background-image: url('/images/iitm-logo.png');
   background-size: 82px 86px;
   display: block;
   text-align: center;
