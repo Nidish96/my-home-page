@@ -651,6 +651,18 @@ _Links_
     <span class="if journal">
       in <span class="journal" style="color:blue;"></span>
     </span>
+    <span class="if booktitle">
+      in <span class="booktitle" style="color:blue;"></span>
+    </span>
+    <span class="if series">
+      , <span class="series" style="color:blue;"></span>
+    </span>    
+    <span class="if publisher">
+      , <span class="publisher" style="color:blue;"></span>
+      <span class="if address">
+	, <span class="address" style="color:blue;"></span>	
+      </span>
+    </span>
     <span class="if school">
       at <span class="school" style="color:blue;"></span>
     </span>
