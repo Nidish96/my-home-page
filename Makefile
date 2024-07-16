@@ -1,28 +1,15 @@
 outdir=./public
 srcdir=./content
 
-.PHONY: all clean
+.PHONY: all build-site clean
 
-all: $(outdir)/favicon.ico $(outdir)/css $(outdir)/images $(outdir)/js $(outdir)/index.html $(outdir)/Publications.bib
+all: build-site
 
-$(outdir)/favicon.ico: $(srcdir)/favicon.ico
-	cp $< $@
-
-$(outdir)/css: $(srcdir)/css $(srcdir)/css/*
-	cp -r $< $(outdir)
-
-$(outdir)/images: $(srcdir)/images $(srcdir)/images/*
-	cp -r $< $(outdir)
-
-$(outdir)/js: $(srcdir)/js $(srcdir)/js/*
-	cp -r $< $(outdir)
-
-$(outdir)/Publications.bib: $(srcdir)/Publications.bib
-	cp $< $@
-
-$(outdir)/index.html: $(srcdir)/*.org $(srcdir)/theme.setup ./build-site.el
+build-site: ./build-site.el
+	@echo "Building Site..."
 	emacs -Q --script build-site.el
 
 clean:
-	rm -rf $(outdir)/*
+	@echo "Cleaning..."
+	@rm -rvf $(outdir)/*
 

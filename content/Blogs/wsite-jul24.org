@@ -1,0 +1,134 @@
+#+title: How I built my Academic Website Using Emacs Org-mode
+#+author: Nidish Narayanaa Balaji
+#+date: {{{time(%Y-%m-%d)}}}
+#+startup: indent
+#+html_head_extra: <style>*{font-size: 15px;}</style>
+
+#+setupfile: ./theme.setup
+
+* <2024-07-15 Mon> How I built my Academic Website Using Emacs Org-mode
+
+Now that I'm starting as an Assistant Professor at IIT-M (Dept. of
+Aerospace Engg.), I feel it makes sense for me to have a personal/lab
+website.
+
+As a student I always appreciated it when my professors had
+a decently updated website online that I can use to read about his/her
+work. More than anybody else, my website is aimed primarily to attract
+prospective students. I will try to consciously maintain the website
+and keep it up to date so students can get an idea of the
+research/teaching I'm involved in.
+
+#+attr_html: :style left:76vw;max-width:23vw;
+#+begin_rmargin
+_*An interesting design-thought*_
+
+Don't we sometimes feel that images are a little distracting while
+reading something serious?
+
+_I contest_ that the side-margin is the best place to put images and
+other content that can be viewed/read without affecting the flow of
+the rest of the document.
+
+Exceptions, of course, exist and this is not a universal rule, but
+proper utilization of margin spaces, at least on a web-interface,
+looks like it can improve information presentation. I plan to test
+this idea out on this blog!
+#+end_rmargin
+This short blog post is not intended to be tutorial of any merit since
+there are more than enough out there already. This is merely meant to
+be a verbose description of the thinking and process that went behind
+the site. 
+
+** Some background
+
+_You can safely skip this section if you're only here for the
+technical content._
+
+Being an Emacs user of ~8 years, I am now completely convinced of
+using [[https://orgmode.org/][Org-mode]] for "seamless" web development. Although I have pretty
+decent programming skills, all of these have so far been oriented
+towards scientific programming and I have never cared to learn much in
+the way of web-development.
+
+I started learning the basics of html-css-javascript and realized
+there's _really nothing to learn_, as far as my purposes (hosting a
+static website) and I could just get started already. The first thing
+I had to understand was the whole html-css-javascript
+framework. Learning a little bit of vanilla javascript was
+helpful. And <f12> on modern web browsers gives basically all we need
+in terms of an interactive environment for development.
+
+** A Brief Overview of my Static Site Creation Process
+
+#+begin_lmargin
+On top of the Makefile, _*being in the Emacs environment affords me so
+many more luxuries*_: 
++ Building the site is just two key strokes away (I've bound the
+  =compile= elisp function)
++ I can add images, tables, etc., and refer to them consistently
+  (links go to the appropriate lines of the source in emacs, and to
+  the approprate portion of the page on the browser);
++ Math formatting, source code blocks, etc. etc., the list goes on.
++ Using the 'html5' [[https://www.gnu.org/software/emacs/manual/html_node/org/HTML-doctypes.html][doctype]] for the export lets me insert new class
+  divs using #+begin_ and #+end_ macros.
+
+  The best part is that everything is free ([[https://www.fsf.org/][as in freedom]])! I don't
+  need to outsource the maintenance of the website and it's easy
+  enough that I can do it myself.
+#+end_lmargin
+Since I'm not really interested in creating completely new
+css-javascript styling, I am using [[https://github.com/fniessen/org-html-themes][the amazing work]] by user fniessen
+on Github as a springing board. I specifically love the Bigblow theme
+and decided to modify the css to suit my needs appropriately.
+
+I followed [[https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/][this tutorial]] by [[https://daviwil.com/][David Wilson]] (who I discovered online from
+his [[https://www.youtube.com/@SystemCrafters][System Crafters]] Youtube channel) to create a basic build system
+using emacs. Since I ended up having to do a bunch of css and
+javascript editing, I wrapped up everything in a [[https://github.com/Nidish96/my-home-page/blob/main/Makefile][GNU Makefile]] that
+simplifies my build process even further. 
+
+#+attr_html: :style left:76vw;max-width:23vw;
+#+begin_rmargin
+I was also told that _*using javascript frameworks is the way people
+develop fancy websites these days*_. I didn't feel a need for this in my
+workflow and with the interest of keeping things simple, both for
+development and maintenance, I've decided against it. The only
+"framework" I'm using is [[https://jquery.com/][jquery]] and a few plugins. 
+#+end_rmargin
+Modification of the CSS ended up being the most frustrating part of
+the process - thankfully a good highschool friend of mine, _Arjun Ram_
+(who works at [[https://carmen.sg/][Carmen Automotives pvt ltd.]]), gave me a hand at
+this. This is the part that felt like it really requires "knowledge" -
+most of everything else can be hacked at quite simply. I must also
+mention that I made liberal use of the LLM search [[https://www.perplexity.ai/][perplexity]] which I
+found quite helpful for javascript. For CSS however, I got nearly
+nothing of value from the LLM searches.
+
+Once this was done, I was able to use javascript quite easily to put
+together the features I needed. Bigblow uses [[https://jquery.com/][jquery]] and a few plugins
+by default, so I'm sticking with this. I also found [[https://github.com/pcooksey/bibtex-js][BibTeX-js]], a
+javascript library that parses bib files to create organized and
+searchable lists of publications ([[file:index.org::#sec-publications][see the output here]]).
+
+The main additions I've added are:
++ Some javascript code to underline occurrences of my name in the
+  publication list;
++ "lmargin" and "rmargin" classes to put content in the left and right
+  margins (an inspiration from [[https://edwardtufte.github.io/tufte-css/][Edward Tufte]]);
++ Setting up a "profile card" for students (this possibly requires
+  more tuning);
++ Transient highlighting of the target of a link once clicked.
+
+** Outro
+
+Obviously what I have so far is very rudimentary in terms of styling,
+but I have a pretty organic feel about it. I hope I continue
+maintiaining it and it really serves the purpose I want it to.
+
+I've created [[file:index.org][a lab website]] and [[file:personal.org][this personal website]]. I hope to keep
+the former updated with my academic activities and use this for
+personal blogs and writing in general.
+
+Last but not the least, I'm hosting the source files for the website
+on Github [[https://github.com/Nidish96/my-home-page/blob/main/Makefile][here]]. I hope it will help at least one more person! :-) 
