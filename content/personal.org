@@ -9,7 +9,7 @@
 
 #+html: <bibtex src="Publications.bib"></bibtex>
 
-* Technical Topics
+* Technical Topics                                                  
 #+attr_html: :style outline:2px solid #2061A2;
 #+begin_lmargin
 #+begin_center

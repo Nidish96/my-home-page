@@ -15,10 +15,15 @@
 (package-install 'ox-pandoc)
 ;; (package-install 'org-ref)
 
+(url-copy-file "https://raw.githubusercontent.com/emacsmirror/org-contrib/master/lisp/ox-extra.el" "./.packages/ox-extra.el" t)
+(add-to-list 'load-path "./.packages")
+
 ;; Load the publishing system
 (require 'ox-publish)
 (require 'ox-pandoc)
 ;; (require 'org-ref)
+(require 'ox-extra)
+(ox-extras-activate '(ignore-headlines))
 
 ;; Setup Inline-js
 (add-to-list 'org-src-lang-modes '("inline-js" . javascript))

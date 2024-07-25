@@ -64,7 +64,7 @@ To be Updated
 [[#roughsurf][file:images/research/stochsurf.png]]
 #+attr_html: :style width:100%; :alt Time-decomposition into fast and slow components
 #+name: tsdec1
-[[#tsdec][file:images/research/tdecomp.png]]
+[[#slowfast][file:images/research/tdecomp.png]]
 #+attr_html: :style width:100%; :alt Experimental setup for nonlinear modal test
 #+name: nlmtesting1
 [[#nlmtesting][file:images/research/rubbersetup.png]]
@@ -159,6 +159,57 @@ Some topical areas include:
 
 The following is a (non-exhaustive) list of specific projects I plan
 to actively seek funding for in the short-term:
+
+*** Direct-Envelope Identification for Nearly Periodic Processes
+:PROPERTIES:
+:CUSTOM_ID: slowfast
+:END:
+
+In a lot of practical problems involving systems undergoing periodic
+or nearly periodic excitation/response, the response can be described
+as a periodic solution with a slowly evolving envelope. Some examples
+included gradual degradation of rotating systems, heat-induced
+property change in vibration machinery, mechanical joint degradation
+due to wear, laminar fluid-field excitation on bluff body (von Karman
+vortex streets), narrow-banded random excitation, etc. In all such
+situations, time-scale separability between *fastly evolving
+vibrations* and *slowly evolving envelopes* is readily possible.
+
+While vibratory systems need to be sampled higher than the Nyquist
+frequency (usually several times more), if all that one is interested
+in is health monitoring, it is sufficient to identify and track the
+envelope of the process. Being slowly evolving processes, it must be
+possible to sample these at much smaller intervals. The research
+question here is: _Knowing the periodicity properties of a system, can
+we reconstruct the vibration envelope using undersampled data?_
+
+_Links_
++ [[tsdec1][(Image) A schematic view of time-scale decomposition.]]
+
+*** Time Scale Decomposition for Thermo-Mechanical Problems
+:PROPERTIES:
+:CUSTOM_ID: tsdec
+:END:
+
+A fundamental observation that can be made in thermo-mechanical
+vibration problems is that the *elastic/mechanical portion* of the
+problem is governed by a *hyperbolic* PDE that leads to
+oscillatory/harmonic solutions, while the *heat equation is parabolic*
+with considerably larger time constants.\\
+Application of time-scale decomposition is a promising framework for
+dealing with such coupled problems. For example in frictional systems,
+the vibration response will be accounted for by the fast dynamics and
+the energy dissipated as heat will be accounted for by slowly evolving
+envelopes. Thermal fluxes from the environment can also be considered
+under such a framework as having a direct influence on the
+vibrations.\\ 
+Mathematically this will be achieved by using a singular perturbation
+framework leading to harmonic balance for the vibrations and a first
+order system for the slow dynamics.
+
+_Links_
++ [[tsdec1][(Image) A schematic view of time-scale decomposition.]]
+
 *** Stochastic Process Approaches For Predictive Constitutive and Damage Modeling of Rough Surfaces
 :PROPERTIES:
 :CUSTOM_ID: roughsurf
@@ -213,30 +264,6 @@ resolved finite element mesh as reference.
 _Links_
 + (Images) [[hred1][Whole joint]] and [[hred2][mesh-coarsening]] reduced order representations for a jointed interface.
 
-*** Time Scale Decomposition for Thermo-Mechanical Problems
-:PROPERTIES:
-:CUSTOM_ID: tsdec
-:END:
-
-A fundamental observation that can be made in thermo-mechanical
-vibration problems is that the *elastic/mechanical portion* of the
-problem is governed by a *hyperbolic* PDE that leads to
-oscillatory/harmonic solutions, while the *heat equation is parabolic*
-with considerably larger time constants.\\
-Application of time-scale decomposition is a promising framework for
-dealing with such coupled problems. For example in frictional systems,
-the vibration response will be accounted for by the fast dynamics and
-the energy dissipated as heat will be accounted for by slowly evolving
-envelopes. Thermal fluxes from the environment can also be considered
-under such a framework as having a direct influence on the
-vibrations.\\ 
-Mathematically this will be achieved by using a singular perturbation
-framework leading to harmonic balance for the vibrations and a first
-order system for the slow dynamics.
-
-_Links_
-+ [[tsdec1][(Image) A schematic view of time-scale decomposition.]]
-
 *** Nonlinear Modal Testing as the Next Paradigm in Industrial Modal Analysis 
 :PROPERTIES:
 :CUSTOM_ID: nlmtesting
@@ -269,6 +296,34 @@ _Links_
 + [[nlmtesting1][(Image) Experimental setup for nonlinear modal testing of a jointed
   fixed-free beam.]] 
   
+*** Wave-Expansion Modeling of Rotors, Frames, etc.
+:PROPERTIES:
+:CUSTOM_ID: wbmmod
+:END:
+
+We recently developed a suite of wave-based analysis tools (see [[https://nidish96.github.io/wavevib][here]]
+for a MATLAB/OCTAVE toolbox) that are generally applicable for
+periodic and quasi-periodic responses of 1D continuum structures. The
+main advantage here is that the approximations obtained are _spatially
+exact_, with errors coming only from the temporal (Fourier)
+approximations. This results in a computational approach that is
+*several orders of magnitude faster* than conventional techniques such
+as finite elements, etc., while assuring superior accuracy.
+
+We are looking to demonstrate the applicability of this method to
++ Rotordynamic problems with nonlinear bearings, contact, etc.,
++ Spatial frame structures with industrial applications.
+
+Theoretically, we are also trying to see if an averaging concept is
+applicable to analyze the stability of the resulting solutions. 
+
+_Links_
++ Research to be conducted in collaboration with [[https://www.me.gatech.edu/faculty/leamy][Prof. Mike Leamy at
+  Georgia Tech]]. 
++ [[wbmmod1][(Image) The wave-based description for a jointed bar]] and [[wbmmod2][(Image)
+  modified AFT procedure for this]].
++ [[#wbmpaper][Entry on past work on this area]].
+
 ** Ongoing Projects
 
 Here is a list of on-going projects at various stages of completion. 
@@ -365,31 +420,6 @@ _Links_
 + Research conducted in collaboration with [[https://scholar.google.com/citations?user=XRl1tHkAAAAJ&hl=en][Prof. D. Dane Quinn at the
   University of Akron]].
 
-*** Wave-Expansion Modeling of Rotors, Frames, etc.
-:PROPERTIES:
-:CUSTOM_ID: wbmmod
-:END:
-
-We recently developed a suite of wave-based analysis tools (see [[https://nidish96.github.io/wavevib][here]]
-for a MATLAB/OCTAVE toolbox) that are generally applicable for
-periodic and quasi-periodic responses of 1D continuum structures. The
-main advantage here is that the approximations obtained are _spatially
-exact_, with errors coming only from the temporal (Fourier)
-approximations. This results in a computational approach that is
-*several orders of magnitude faster* than conventional techniques such
-as finite elements, etc., while assuring superior accuracy.
-
-We are looking to demonstrate the applicability of this method to
-+ Rotordynamic problems with nonlinear bearings, contact, etc.,
-+ Spatial frame structures with industrial applications.
-
-Theoretically, we are also trying to see if an averaging concept is
-applicable to analyze the stability of the resulting solutions. 
-
-_Links_
-+ Research conducted in collaboration with [[https://www.me.gatech.edu/faculty/leamy][Prof. Mike Leamy at Georgia Tech]].
-+ [[wbmmod1][(Image) The wave-based description for a jointed bar]] and [[wbmmod2][(Image)
-  modified AFT procedure for this]]. 
 
 ** Past Research
 
@@ -744,6 +774,8 @@ IIT-Madras since 2024. [[file:personal.org][Link to Personal Website]].
 ** Students
 Applications welcome - [[mailto:nidish@iitm.ac.in][Just email me!]]
 
+
+* Footer Scripts                                                     :ignore:
 #+begin_src inline-js
   // Underline my name in bib
   function underlinemyname() {
@@ -790,6 +822,8 @@ Applications welcome - [[mailto:nidish@iitm.ac.in][Just email me!]]
   window.addEventListener('resize', setupprofileimgs);
   document.addEventListener('readystatechange', setupprofileimgs);
   setupprofileimgs();
+
+  hsCollapse3P();
 #+end_src
 
 #+begin_export html
