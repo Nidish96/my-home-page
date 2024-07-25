@@ -822,8 +822,6 @@ Applications welcome - [[mailto:nidish@iitm.ac.in][Just email me!]]
   window.addEventListener('resize', setupprofileimgs);
   document.addEventListener('readystatechange', setupprofileimgs);
   setupprofileimgs();
-
-  hsCollapse3P();
 #+end_src
 
 #+begin_export html
