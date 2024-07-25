@@ -42,9 +42,9 @@
       org-html-postamble t
       org-html-postamble-format '(("en"
 				   "<div id=\"footer\">\n \
-				   <ul>\n<li><a href=\"/sitemap.html\" title=\"Sitemap\">Sitemap</a></li>\n \
+				   <ul>\n<li><a href=\"/my-home-page/sitemap.html\" title=\"Sitemap\">Sitemap</a></li>\n \
 				   <li><a href=\"mailto:nidish@iitm.ac.in\" title=\"Email me at nidish@iitm.ac.in !\">Contact</a></li>\n \
-				   <li><a href=\"/personal.html#blog-creation\" title=\"CSS\"> \
+				   <li><a href=\"/my-home-page/personal.html#blog-creation\" title=\"CSS\"> \
 				   Like this CSS?</a></li>\n \
 				   </ul>\n </div>\n\n \
 				   <p class=\"creator\" style=\"font-size:9px;\">Created using %c.</p>\n \
