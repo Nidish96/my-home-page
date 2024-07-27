@@ -1,4 +1,4 @@
-outdir=./docs
+outdir=./public
 srcdir=./content
 
 .PHONY: all build-site clean
