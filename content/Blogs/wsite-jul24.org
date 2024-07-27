@@ -7,6 +7,9 @@
 #+setupfile: ./theme.setup
 
 * <2024-07-15 Mon> How I built my Academic Website Using Emacs Org-mode
+:PROPERTIES:
+:EXPORT_DATE: 2024:July:15
+:END:
 
 Now that I'm starting as an Assistant Professor at IIT-M (Dept. of
 Aerospace Engg.), I feel it makes sense for me to have a personal/lab
