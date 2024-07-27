@@ -63,7 +63,7 @@
        (list "ViND Lab Site"
 	     :recursive t
 	     :base-directory "./content"
-	     :publishing-directory "./docs"
+	     :publishing-directory "./public"
 	     :publishing-function 'org-html-publish-to-html
 	     :with-author t
 	     :with-creator t
@@ -77,7 +77,7 @@
        (list "css-js"
 	     :recursive t
 	     :base-directory "./content/"
-	     :publishing-directory "./docs"
+	     :publishing-directory "./public"
 	     :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|bib\\|ico"
 	     :publishing-function 'org-publish-attachment
 	     )
