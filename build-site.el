@@ -13,15 +13,21 @@
 ;; Install dependencies
 (package-install 'htmlize)
 (package-install 'ox-pandoc)
-;; (package-install 'org-ref)
+(package-install 'org-ref)
+(package-install 'ov)
+
 
 (url-copy-file "https://raw.githubusercontent.com/emacsmirror/org-contrib/master/lisp/ox-extra.el" "./.packages/ox-extra.el" t)
+(url-copy-file "https://raw.githubusercontent.com/jkitchin/jmax/master/org-colored-text.el"
+	       "./.packages/org-colored-text.el" t)
+
 (add-to-list 'load-path "./.packages")
 
 ;; Load the publishing system
 (require 'ox-publish)
 (require 'ox-pandoc)
-;; (require 'org-ref)
+(require 'org-ref)
+(require 'org-colored-text)
 (require 'ox-extra)
 (ox-extras-activate '(ignore-headlines))
 
@@ -42,9 +48,9 @@
       org-html-postamble t
       org-html-postamble-format '(("en"
 				   "<div id=\"footer\">\n \
-				   <ul>\n<li><a href=\"/my-home-page/sitemap.html\" title=\"Sitemap\">Sitemap</a></li>\n \
+				   <ul>\n<li><a href=\"/~nidish/sitemap.html\" title=\"Sitemap\">Sitemap</a></li>\n \
 				   <li><a href=\"mailto:nidish@iitm.ac.in\" title=\"Email me at nidish@iitm.ac.in !\">Contact</a></li>\n \
-				   <li><a href=\"/my-home-page/personal.html#blog-creation\" title=\"CSS\"> \
+				   <li><a href=\"/~nidish/personal.html#blog-creation\" title=\"See my notes on building it\"> \
 				   Like this CSS?</a></li>\n \
 				   </ul>\n </div>\n\n \
 				   <p class=\"creator\" style=\"font-size:9px;\">Created using %c.</p>\n \
@@ -55,6 +61,7 @@
       org-confirm-babel-evaluate nil
       org-export-babel-evaluate t
       org-export-use-babel t
+      org-publish-use-timestamps-flag t
       )
 
 ;; Define the publishing project
@@ -80,9 +87,9 @@
 	     :publishing-directory "./public"
 	     :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|bib\\|ico"
 	     :publishing-function 'org-publish-attachment
+	     :exclude "ltximg/*"
 	     )
        ))
 
 ;; Generate the site output
-(org-publish-all t)
-
+(org-publish-all nil)
