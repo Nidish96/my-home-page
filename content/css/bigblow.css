@@ -52,7 +52,9 @@ html {
     margin: 0px 0px 20px 0px;
     padding: 0;
     width: 100vw;
-    padding-left: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #tabs ul {

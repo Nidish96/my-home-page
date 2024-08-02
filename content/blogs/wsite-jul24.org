@@ -9,6 +9,7 @@
 * <2024-07-15 Mon> How I built my Academic Website Using Emacs Org-mode
 :PROPERTIES:
 :EXPORT_DATE: 2024:July:15
+:CUSTOM_ID: blog-creation
 :END:
 
 Now that I'm starting as an Assistant Professor at IIT-M (Dept. of
@@ -38,10 +39,10 @@ proper utilization of margin spaces, at least on a web-interface,
 looks like it can improve information presentation. I plan to test
 this idea out on this blog!
 #+end_rmargin
-This short blog post is not intended to be tutorial of any merit since
-there are more than enough out there already. This is merely meant to
-be a verbose description of the thinking and process that went behind
-the site. 
+This short blog post is not intended to be a tutorial of any merit
+since there are more than enough out there already. This is merely
+meant to be a verbose description of the thinking and process that
+went behind the site. 
 
 ** Some background
 
@@ -49,18 +50,19 @@ _You can safely skip this section if you're only here for the
 technical content._
 
 Being an Emacs user of ~8 years, I am now completely convinced of
-using [[https://orgmode.org/][Org-mode]] for "seamless" web development. Although I have pretty
-decent programming skills, all of these have so far been oriented
-towards scientific programming and I have never cared to learn much in
-the way of web-development.
+using [[https://orgmode.org/][Org-mode]] for "seamless" web development. Although I have decent
+programming skills, all of these have so far been oriented towards
+scientific programming and I have never cared to learn much in the way
+of web-development. 
 
 I started learning the basics of html-css-javascript and realized
-there's _really nothing to learn_, as far as my purposes (hosting a
-static website) and I could just get started already. The first thing
-I had to understand was the whole html-css-javascript
+there's _really nothing to learn_, as far as my purposes go (hosting a
+simple static website) and I could just get started already. The first
+thing I had to understand was the whole html-css-javascript
 framework. Learning a little bit of vanilla javascript was
-helpful. And <f12> on modern web browsers gives basically all we need
-in terms of an interactive environment for development.
+helpful. And <f12> on modern web browsers (I use firefox) gives
+basically all we need in terms of an interactive environment for
+development. 
 
 ** A Brief Overview of my Static Site Creation Process
 
@@ -112,7 +114,7 @@ Once this was done, I was able to use javascript quite easily to put
 together the features I needed. Bigblow uses [[https://jquery.com/][jquery]] and a few plugins
 by default, so I'm sticking with this. I also found [[https://github.com/pcooksey/bibtex-js][BibTeX-js]], a
 javascript library that parses bib files to create organized and
-searchable lists of publications ([[file:index.org::#sec-publications][see the output here]]).
+searchable lists of publications ([[file:../index.org::#sec-publications][see the output here]]).
 
 The main additions I've added are:
 + Some javascript code to underline occurrences of my name in the

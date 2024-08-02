@@ -30,38 +30,8 @@ website, [[file:index.org][you can find it here]].
 You can find my writings on technical topics here pertaining either to
 research or to programming in general.
 
-#+include: ./Blogs/wsite-jul24.org :lines "8-"
+#+include: ./blogs/wsite-jul24.org :lines "8-"
 
 * General Topics
 
 You can find my writings on general topics here. 
-
-* Pedagogy
-:PROPERTIES:
-:CUSTOM_ID: sec-pedagogy
-:END:
-
-** AS3020: Aerospace Structures
-*** Terms Taught
-1. Jul-Nov 2024
-
-*** Course Content
-+ Determination of loads acting on major airplane components (wing, fuselage, tails).
-+ Analysis of wings.
-  + Shear centre.
-  + Bending and torsion of closed and open tubes.
-  + Multi-cell tubes.
-  + Columns and beam-columns.
-  + Bending and buckling of plates and sheet stringer combination.
-+ Analysis of fuselage.
-  + Learn about the main aircraft structural components, to introduce the concept of semi-monocoque construction in aircraft, discuss different loads acting on an aircraft, concept of airworthiness and generation of a safety-flight envelope (known as ‘V-n’ diagram).
-  + Modelling the components in terms of 1-D or 2-D structural elements.
-  + Analysis of thin-walled open and closed section beams under bending, shear and torsional loads.
-  + Bending and buckling of plates and sheet-stiffener combination.
-+ Structural idealization of wings and fuselage and preliminary analysis.
-
-* SiteMap
-:PROPERTIES:
-:CUSTOM_ID: sec-sitemap
-:END:
-#+include: ./sitemap.org :lines "2-"

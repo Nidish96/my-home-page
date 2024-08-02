@@ -45,6 +45,8 @@ types of projects we like to work on. However, we are not closed to
 suggestions for new topics/areas! :)
 
 ** Useful Links
++ [[https://sfp.iitm.ac.in/][IITM-SFP]]: IITM's Summer research fellowship for Bachelors' &
+  Masters' students to pursue a research internship with a stipend
 
 + [[https://www.ila.uni-stuttgart.de/nlvib][NLVib]]: A MATLAB/OCTAVE toolbox for harmonic balance
 + [[https://nidish96.github.io/wavevib/#outline-container-org2ca0aa0][WaveVib]]: A MATLAB/OCTAVE toolbox for wave-based analysis of jointed 1D structures
@@ -53,9 +55,7 @@ suggestions for new topics/areas! :)
 ** Facilities
 To be Updated
 
-** Resources
-
-+ [[file:personal.org::#sec-pedagogy][Teaching Resources]]
+** COMMENT Resources
 
 * Research
 #+begin_lmargin
@@ -739,23 +739,50 @@ _Links_
 #+end_export
 
 
+* Pedagogy
+:PROPERTIES:
+:CUSTOM_ID: sec-pedagogy
+:END:
+
+** AS3020: Aerospace Structures
+*** Terms Taught
+1. [[file:courses/as3020/as3020st_fall24.org][Jul-Nov 2024]]
+
+   
+*** Course Content
++ Determination of loads acting on major airplane components (wing, fuselage, tails).
++ Analysis of wings.
+  + Shear centre.
+  + Bending and torsion of closed and open tubes.
+  + Multi-cell tubes.
+  + Columns and beam-columns.
+  + Bending and buckling of plates and sheet stringer combination.
++ Analysis of fuselage.
+  + Learn about the main aircraft structural components, to introduce the concept of semi-monocoque construction in aircraft, discuss different loads acting on an aircraft, concept of airworthiness and generation of a safety-flight envelope (known as ‘V-n’ diagram).
+  + Modelling the components in terms of 1-D or 2-D structural elements.
+  + Analysis of thin-walled open and closed section beams under bending, shear and torsional loads.
+  + Bending and buckling of plates and sheet-stiffener combination.
++ Structural idealization of wings and fuselage and preliminary analysis.
+
+
 * Members
-** COMMENT Post Doctoral Researchers
-
-** COMMENT PhD Students
-
-** COMMENT MS Students
-
-** COMMENT Under Graduate Students
-
-** COMMENT Alumni
 ** Principal Investigator: Dr. Nidish Narayanaa Balaji
+:PROPERTIES:
+:CUSTOM_ID: mypage
+:END:
 #+attr_html: :style width:25vw;
+#+caption: [[file:personal.org][Personal Website]], [[https://scholar.google.com/citations?user=57kAXckAAAAJ][Google Scholar]], [[https://www.researchgate.net/profile/Nidish-Narayanaa-Balaji][ResearchGate]]
 [[file:images/me2c_apr2024.png]]
 
 #+begin_profile
 Assistant Professor in the [[http://www.ae.iitm.ac.in/][Aerospace Engineering Department]] at
-IIT-Madras since 2024. [[file:personal.org][Link to Personal Website]].
+IIT-Madras since 2024.
+
+*Contact Details*
++ *Email*: [[mailto:nidish@iitm.ac.in][nidish@iitm.ac.in]]
++ *Office*: Room 139, Department of
+  Aerospace Engineering
++ *Phone*: TBA
 
 *Educational Background:*
 + B.Tech. in Aerospace Engineering (2013-2017): [[https://www.iist.ac.in/][Indian Institute of Space Science
@@ -765,16 +792,21 @@ IIT-Madras since 2024. [[file:personal.org][Link to Personal Website]].
 + Postdoctoral researcher at [[https://www.rice.edu/][Rice University]] Mechanical Engineering (2021-2022).
 + [[https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship][Humboldt postdoctoral researcher]] at the [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][University of Stuttgart
   (ILA)]] (2022-2024).
-
-*Contact Details*
-+ *Email*: [[mailto:nidish@iitm.ac.in][nidish@iitm.ac.in]]
-+ *Office*: Room 139, Department of Aerospace Engineering
-+ *Phone*: TBA
+  
 #+end_profile  
 ** Students
-Applications welcome - [[mailto:nidish@iitm.ac.in][Just email me!]]
++ Applications welcome - [[mailto:nidish@iitm.ac.in][Just email me!]]
++ Also have a look at [[https://sfp.iitm.ac.in/][IITM Summer Fellowship Programme]].
 
+** COMMENT Post Doctoral Researchers
 
+** COMMENT PhD Students
+
+** COMMENT MS Students
+
+** COMMENT Under Graduate Students
+
+** COMMENT Alumni
 * Footer Scripts                                                     :ignore:
 #+begin_src inline-js
   // Underline my name in bib
@@ -836,6 +868,10 @@ Applications welcome - [[mailto:nidish@iitm.ac.in][Just email me!]]
   width: 82px;
   height: 86px;
   content:"";
+  }
+
+  .figure-number {
+    display: none;
   }
 </style>
 #+end_export

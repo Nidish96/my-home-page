@@ -2,5 +2,5 @@
 
 - [[file:personal.org][Musings to Manage]]
 - [[file:index.org][Vibrations and Nonlinear Dynamics Laboratory, IIT-Madras]]
-- Blogs
-  - [[file:Blogs/wsite-jul24.org][How I built my Academic Website Using Emacs Org-mode]]
+- blogs
+  - [[file:blogs/wsite-jul24.org][How I built my Academic Website Using Emacs Org-mode]]
