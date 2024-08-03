@@ -352,3 +352,5 @@ function hsAddReviewingPanels() {
 // });
 
 $(function(){hsCollapse3P();});
+
+window.addEventListener('load', hsCollapse3P);

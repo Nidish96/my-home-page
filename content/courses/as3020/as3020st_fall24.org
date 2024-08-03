@@ -7,31 +7,46 @@
 #+setupfile: ./theme.setup
 
 * Introduction
-** Instructor and TA
-+ [[file:../../index.org][Dr. Nidish Narayanaa Balaji]]
-  + [[mailto:nidish@iitm.ac.in][nidish@iitm.ac.in]], Room 139 AE building
-+ *TA*: TBD
-** Some Planning
-#+begin_lmargin
+:PROPERTIES:
+:CUSTOM_ID: intro
+:END:
+#+begin_lmargin 
+#+attr_html: :frame border
+#+caption: A few shortcuts to help navigate the site
+| n, p | Next/Prev tab               |
+| <, > | Scroll to top/bottom        |
+| -, + | Collapse/expand all         |
+| c, e | Collapse/expand subheadings |
+#+end_lmargin
+
+#+begin_rmargin
 #+attr_html: :style width:100%; :alt Aircraft Structures for Engineering Students, T.H.G. Megson
 #+name: megson
 #+caption: Course Textbook: "Aircraft Structures for Engineering Students", T.H.G. Megson
 [[https://shop.elsevier.com/books/aircraft-structures-for-engineering-students/megson/978-0-12-822868-5][file:files/megson.jpg]]
-#+end_lmargin
+#+end_rmargin
+** Instructor, TA, and the basics
++ [[file:../../index.org][Dr. Nidish Narayanaa Balaji]]
+  + [[mailto:nidish@iitm.ac.in][nidish@iitm.ac.in]], Room 139 AE building
++ *TA*: TBD
++ *Textbook Reference*: "/Aircraft Structures for Engineering Students/", T.H.G. Megson
+
+  #+html: <embed src="./files/July-2024_final_timetable_R1.pdf" width="80%" height="375">
+
+** Some Planning
 + The lectures will be split into *eight modules*:
-  |  <r> | <l>                           |   <c>    |     <c>     |
   | SNo. | Topic                         | Lectures | Assignments |
   |------+-------------------------------+----------+-------------|
-  |    1 | [[#mod1][Design of Aircrafts]]           |    3     |      1      |
-  |    2 | [[#mod2][Aircraft Materials]]            |    3     |      1      |
-  |    3 | [[#mod3][Elasticity]]                    |    5     |      1      |
-  |    4 | [[#mod4][Bending of Beams]]              |    6     |      1      |
-  |    5 | [[#mod5][Torsion of Beams]]              |    5     |      1      |
-  |    6 | [[#mod6][2D Problems and Plate Bending]] |    5     |      1      |
-  |    7 | [[#mod7][Structural Stability]]          |    3     |      1      |
-  |    8 | [[#mod8][Structural Vibrations]]         |    2     |      1      |
+  |    1 | [[#mod1][Design of Aircrafts]]           |        3 |           1 |
+  |    2 | [[#mod2][Aircraft Materials]]            |        3 |           1 |
+  |    3 | [[#mod3][Elasticity]]                    |        5 |           1 |
+  |    4 | [[#mod4][Bending of Beams]]              |        6 |           1 |
+  |    5 | [[#mod5][Torsion of Beams]]              |        5 |           1 |
+  |    6 | [[#mod6][2D Problems and Plate Bending]] |        5 |           1 |
+  |    7 | [[#mod7][Structural Stability]]          |        3 |           1 |
+  |    8 | [[#mod8][Structural Vibrations]]         |        2 |           1 |
   |------+-------------------------------+----------+-------------|
-  |      | *Total*                       |    32    |      8      |
+  |      | *Total*                       |       32 |           8 |
   #+TBLFM: @>$4=vsum(@3..@10)::@>$3=vsum(@3..@10)
 + We have a total of *65 working days* ahead of us. The weekly splitup is:
   + *3 Lectures*: _~39 in total_
@@ -59,7 +74,6 @@ which *evaluation will not be done*.
   + Each assignment will include *2 numerical/analytical exercises*
     and *one reading exercise*.
 + *Two Quizzes and an End Sem* occupy the examination portion.
-  |        <r> |     <c>     |   <c>   |   <c>   |
   | Evaluation | Assignments | Quizzes | End-Sem |
   |------------+-------------+---------+---------|
   |  Weightage |     40%     |   40%   |   20%   |
@@ -132,7 +146,16 @@ which *evaluation will not be done*.
   + Other joining methods.
     #+attr_html: :style width:60%
     [[https://www.goebelfasteners.com/why-are-airplanes-manufactured-with-riveted-joints-instead-of-welded/][file:files/mod1/rivets.png]]
-    
+** Lecture 1
+*** Historical Overview
++ [[https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/wright-brothers-aircraft/][The Wright Brothers aircraft]]
+  + Wooden design
+  + [[https://en.wikipedia.org/wiki/Sopwith_Camel][1917 Sopwith Camel]]
++ Warren Truss designs
+  + Struts: support longitudinal compression
+  + Truss frame carried the load, skin was just for aerodynamics
++ Monocoque design
+
 * Module 2: Aircraft Materials
 :PROPERTIES:
 :CUSTOM_ID: mod2

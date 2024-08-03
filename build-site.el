@@ -81,7 +81,7 @@
 	     :auto-sitemap t
 	     :sitemap-style 'tree
 	     )
-       (list "css-js"
+       (list "css-js-media"
 	     :recursive t
 	     :base-directory "./content/"
 	     :publishing-directory "./public"
@@ -92,4 +92,4 @@
        ))
 
 ;; Generate the site output
-(org-publish-all nil)
+(org-publish-all t)
