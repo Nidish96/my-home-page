@@ -852,7 +852,7 @@ IIT-Madras since 2024.
       }
   }
   window.addEventListener('resize', setupprofileimgs);
-  document.addEventListener('readystatechange', setupprofileimgs);
+  document.addEventListener('readystatechange', setupprofileimgs); 
   setupprofileimgs();
 #+end_src
 
