@@ -3,7 +3,7 @@
 #+author: Nidish Narayanaa Balaji
 #+date: {{{time(%Y-%m-%d)}}}
 #+startup: indent
-#+html_head_extra: <style>*{font-size: 15px;}</style>
+#+html_head_extra: <style>body{font-size: 15px;}</style>
 #+html_head_extra: <meta name="viewport" content="width=1024">
 #+setupfile: ./theme.setup
 
@@ -44,18 +44,48 @@ You can have a look at the research tab to get a general sense of the
 types of projects we like to work on. However, we are not closed to
 suggestions for new topics/areas! :)
 
+** Opportunities to Join the Lab (Dated: <2025-02-16 Sun>)
+
+I'm presently looking for
+
++ [[color:blue][Masters' Students]] (undergraduates will also be considered):
+  1. *Development of higher order Shell Finite Elements.*
+  2. *Building a nonlinear oscillator using analog electronics.*
+  3. *Implementation of Nonlinear Modal Analysis on a Finite Element Software.*
+  4. *Using fractal surface theory to quantify and localize surface damage from interferometric scans.* 
++ [[color:blue][PhD Students]]:
+  1. *Slow-fast decomposition of nonlinear dynamic responses for vibration monitoring and control*
+  2. *Response Synthesis from Nonlinear Modal Analysis*
+
+Please email me at [[mailto:nidish@iitm.ac.in][nidish@iitm.ac.in]] if you are interested.   
+
+#+begin_note
+*IITM Summer Fellowship Programme* \\
+The summer fellowship programme is currently accepting applications. This is open to 3/4th year undergrads and Master's students. The deadline is <2025-02-28 Fri>, please apply!
+
+Here's the link: https://ssp.iitm.ac.in/summer-fellowship-registration
+#+end_note
+
 ** Useful Links
-+ [[https://sfp.iitm.ac.in/][IITM-SFP]]: IITM's Summer research fellowship for Bachelors' &
++ [[https://ssp.iitm.ac.in/summer-fellowship-registration][IITM-SFP]]: IITM's Summer research fellowship for Bachelors' &
   Masters' students to pursue a research internship with a stipend
 
 + [[https://www.ila.uni-stuttgart.de/nlvib][NLVib]]: A MATLAB/OCTAVE toolbox for harmonic balance
 + [[https://nidish96.github.io/wavevib/#outline-container-org2ca0aa0][WaveVib]]: A MATLAB/OCTAVE toolbox for wave-based analysis of jointed 1D structures
 + [[https://nidish96.github.io/Abaqus4Joints/][Abaqus4Joints]]: An ABAQUS/MATLAB tutorial for jointed dynamics modeling
 
-** Facilities
+** COMMENT Facilities
 To be Updated
 
-** COMMENT Resources
+** Resources/Slides
++ (<2025-01-07 Tue>) [[file:files/nidish_topics_7jan24.pdf][Project Topics for MTech Students]]
++ (<2025-02-06 Thu>) [[file:files/outline_6feb2025.pdf][Outline Presentation at IIST, Thiruvananthapuram]]
+  
+*** Conference Talks
++ (<2025-02-01 Sat>) [[file:files/nafed_nnm_balaji.pdf][Proposal for Nonlinear Normal Modes in FEAST]], NAFED 08, IITH.
++ (<2025-02-11 Tue>) [[file:files/imac25_pnois.pdf][Nonlinear Modal Synthesis under Narrow-band Random Excitation]], IMAC 2025, Orlando, FL.
++ (<2025-02-12 Wed>) [[file:files/imac25_hystid.pdf][Epistemic Insights on Dry-Friction From Micro-Slip Measurements]], IMAC 2025, Orlando, FL.
++ (<2025-02-13 Thu>) [[file:files/imac25_linlof.pdf][Averaging-based Stability Certification for Harmonic Balance applied to Fold and Neimark-Sacker bifurcations]], IMAC 2025, Orlando, FL.
 
 * Research
 #+begin_lmargin
@@ -744,34 +774,109 @@ _Links_
 :CUSTOM_ID: sec-pedagogy
 :END:
 
-** AS3020: Aerospace Structures
-*** Terms Taught
-1. [[file:courses/as3020/as3020st_fall24.org][Jul-Nov 2024]]
-
-   
-*** Course Content
-+ Determination of loads acting on major airplane components (wing, fuselage, tails).
-+ Analysis of wings.
-  + Shear centre.
-  + Bending and torsion of closed and open tubes.
-  + Multi-cell tubes.
-  + Columns and beam-columns.
-  + Bending and buckling of plates and sheet stringer combination.
-+ Analysis of fuselage.
-  + Learn about the main aircraft structural components, to introduce the concept of semi-monocoque construction in aircraft, discuss different loads acting on an aircraft, concept of airworthiness and generation of a safety-flight envelope (known as ‘V-n’ diagram).
-  + Modelling the components in terms of 1-D or 2-D structural elements.
-  + Analysis of thin-walled open and closed section beams under bending, shear and torsional loads.
-  + Bending and buckling of plates and sheet-stiffener combination.
-+ Structural idealization of wings and fuselage and preliminary analysis.
-
+|-------+-----------+--------------------------------+--------------|
+| S.No. | Course ID | Title                          |   Term(s)    |
+|-------+-----------+--------------------------------+--------------|
+|    1. | AS3020    | Aerospace Structures           | [[file:courses/as3020/as3020st_fall24.org][Jul-Nov 2024]] |
+|    2. | AS2070    | Aerospace Structural Mechanics | [[file:courses/as2070/as2070_spring2025.org][Jan-May 2025]] |
 
 * Members
-** Principal Investigator: Dr. Nidish Narayanaa Balaji
+#+begin_picblurb
+  #+begin_pic
+  [[file:images/me2c_apr2024.png]]
+  #+end_pic
+
+  #+begin_blurb
+  [[*Principal Investigator][*Nidish Narayanaa Balaji (PI)*]]
+  
+  Assistant Professor in the [[http://www.ae.iitm.ac.in/][Aerospace Engineering Department]] at
+  IIT-Madras since 2024.
+  
+  *Contact Details*
+  + *Email*: [[mailto:nidish@iitm.ac.in][nidish@iitm.ac.in]]
+  + *Office*: Room 139, Department of
+    Aerospace Engineering
+  + *Phone*: 044-2257-4042
+  #+end_blurb
+#+end_picblurb
++ Applications welcome - [[mailto:nidish@iitm.ac.in][Just email me!]]
+** M.Tech. Students
+#+begin_picblurb
+  #+begin_pic
+  [[file:images/stub.png]]
+  #+end_pic
+
+  #+begin_blurb
+  *Charan Kumar* (M.Tech. 2024)
+
+  Plane Wave Expansion (PWE) approaches for 3D frame structures with nonlinear joints.
+  
+  *Contact Details*
+  + *Email*: [[mailto:ae24m012@smail.iitm.ac.in][ae24m012@smail.iitm.ac.in]]
+  #+end_blurb
+#+end_picblurb
+
+#+begin_picblurb
+  #+begin_pic
+  [[file:images/stub.png]]
+  #+end_pic
+
+  #+begin_blurb
+  *Sathyanarayana Reddy* (M.Tech. 2024)
+
+  Development of spline-based numerical continuation methods.
+  
+  *Contact Details*
+  + *Email*: [[mailto:ae24m046@smail.iitm.ac.in][ae24m046@smail.iitm.ac.in]]
+  #+end_blurb
+#+end_picblurb
+
+#+begin_picblurb
+  #+begin_pic
+  [[file:images/stub.png]]
+  #+end_pic
+
+  #+begin_blurb
+  *Dhanush M* (M.Tech. 2024)
+
+  Development of Julia code for nonlinear vibration analysis.
+  
+  *Contact Details*
+  + *Email*: [[mailto:ae24m014@smail.iitm.ac.in][ae24m014@smail.iitm.ac.in]]
+  #+end_blurb
+#+end_picblurb
+
+** Undergraduate Students
+#+begin_picblurb
+  #+begin_pic
+  [[file:images/stub.png]]
+  #+end_pic
+
+  #+begin_blurb
+  *Viswajit Ati* (B.Tech. 2022)
+
+  Raspberry Pi-based platform for vibration testing.
+  
+  *Contact Details*
+  + *Email*: [[mailto:ae22b064@smail.iitm.ac.in][ae22b064@smail.iitm.ac.in]]
+  #+end_blurb
+#+end_picblurb  
+  
+** COMMENT Post Doctoral Researchers
+
+** COMMENT PhD Students
+
+** COMMENT MS Students
+
+** COMMENT Under Graduate Students
+
+** COMMENT Alumni
+* Principal Investigator
 :PROPERTIES:
 :CUSTOM_ID: mypage
 :END:
 #+attr_html: :style width:25vw;
-#+caption: [[file:personal.org][Personal Website]], [[https://scholar.google.com/citations?user=57kAXckAAAAJ][Google Scholar]], [[https://www.researchgate.net/profile/Nidish-Narayanaa-Balaji][ResearchGate]]
+#+caption: Nidish Narayanaa Balaji: [[file:personal.org][Personal Website]], [[https://scholar.google.com/citations?user=57kAXckAAAAJ][Google Scholar]], [[https://www.researchgate.net/profile/Nidish-Narayanaa-Balaji][ResearchGate]], [[file:images/Nidish_CV.pdf][Link to CV]]
 [[file:images/me2c_apr2024.png]]
 
 #+begin_profile
@@ -782,7 +887,7 @@ IIT-Madras since 2024.
 + *Email*: [[mailto:nidish@iitm.ac.in][nidish@iitm.ac.in]]
 + *Office*: Room 139, Department of
   Aerospace Engineering
-+ *Phone*: TBA
++ *Phone*: 044-2257-4042
 
 *Educational Background:*
 + B.Tech. in Aerospace Engineering (2013-2017): [[https://www.iist.ac.in/][Indian Institute of Space Science
@@ -792,21 +897,24 @@ IIT-Madras since 2024.
 + Postdoctoral researcher at [[https://www.rice.edu/][Rice University]] Mechanical Engineering (2021-2022).
 + [[https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship][Humboldt postdoctoral researcher]] at the [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][University of Stuttgart
   (ILA)]] (2022-2024).
-  
+
+*Awards and Recognitions*
++ Awarded the [[color:blue][Alexander von Humboldt Postdoctoral Fellowship]]
+  for conducting research at the University of Stuttgart, hosted by
+  Prof. Malte Krack.  
++ Awarded the [[color:blue][2020-2021 Emmett T. and Geraldyne Smith Roberts Award]] by
+  the Department of Mechanical Engineering, Rice University "/to
+  recognize a graduate student that has demonstrated academic
+  achievement and outstanding quality of research./" 
++ Awarded the [[color:blue][Resiliency Award]] from the AMPT Center, Rice University
+  (Additive Manufacturing, Performance and Tribology center) during
+  the 2020 AMPT Symposium for "/demonstrating exceptional resilience
+  in research in the face of challenges posed by COVID-19/". 
++ Awarded the [[color:blue][Ken Kennedy-Cray Inc. Fellowship]] for the
+  academic year 2019/20 by the Ken Kennedy Institute, Rice University,
+  for "/the development of High-Performance codes for Joint Dynamics/".
 #+end_profile  
-** Students
-+ Applications welcome - [[mailto:nidish@iitm.ac.in][Just email me!]]
-+ Also have a look at [[https://sfp.iitm.ac.in/][IITM Summer Fellowship Programme]].
-
-** COMMENT Post Doctoral Researchers
-
-** COMMENT PhD Students
-
-** COMMENT MS Students
-
-** COMMENT Under Graduate Students
-
-** COMMENT Alumni
+  
 * Footer Scripts                                                     :ignore:
 #+begin_src inline-js
   // Underline my name in bib
@@ -859,19 +967,45 @@ IIT-Madras since 2024.
 #+begin_export html
 <style>
   h1::before {
-  background-image: url('./images/iitm-logo.png');
-  background-size: 82px 86px;
-  display: block;
-  text-align: center;
-  align-content: center;
-  margin: auto auto auto auto;
-  width: 82px;
-  height: 86px;
-  content:"";
+      background-image: url('./images/iitm-logo.png');
+      background-size: 82px 86px;
+      display: block;
+      text-align: center;
+      align-content: center;
+      margin: auto auto auto auto;
+      width: 82px;
+      height: 86px;
+      content:"";
+  }
+  
+  .figure-number {
+      display: none;
+  }
+  
+  /* Number the bibtex entries */
+  .templates {
+      counter-reset: bibtexentry; /* Create a counter called 'entry' and set it to 0 */
+  }
+  
+  .bibtexentry {
+      counter-increment: bibtexentry; /* Increment the counter for each .entry */
+      position: relative; /* For positioning the number */
+  }
+  
+  .bibtexentry::before {
+      content: counter(bibtexentry) ". "; /* Add the counter value before the content of each .entry */
+      position: absolute; /* Position the number relative to the .entry */
+      left: -30px; /* Adjust as needed */
+      top: 0; /* Align with the top of the entry */
+      font-weight: bold; /* Optional styling */
   }
 
-  .figure-number {
-    display: none;
+  h3.orgbib {
+  text-align: center;
   }
+
+  div.sort.year {
+  padding-top: 1vh;
+  } 
 </style>
 #+end_export

@@ -17,9 +17,9 @@
 (package-install 'ov)
 
 
-(url-copy-file "https://raw.githubusercontent.com/emacsmirror/org-contrib/master/lisp/ox-extra.el" "./.packages/ox-extra.el" t)
-(url-copy-file "https://raw.githubusercontent.com/jkitchin/jmax/master/org-colored-text.el"
-	       "./.packages/org-colored-text.el" t)
+;; (url-copy-file "https://raw.githubusercontent.com/emacsmirror/org-contrib/master/lisp/ox-extra.el" "./.packages/ox-extra.el" t)
+;; (url-copy-file "https://raw.githubusercontent.com/jkitchin/jmax/master/org-colored-text.el"
+;; 	       "./.packages/org-colored-text.el" t)
 
 (add-to-list 'load-path "./.packages")
 
@@ -62,6 +62,7 @@
       org-export-babel-evaluate t
       org-export-use-babel t
       org-publish-use-timestamps-flag t
+      org-ref-insert-cite-function (lambda () (org-cite-insert nil))
       )
 
 ;; Define the publishing project
@@ -85,7 +86,7 @@
 	     :recursive t
 	     :base-directory "./content/"
 	     :publishing-directory "./public"
-	     :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|bib\\|ico"
+	     :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|bib\\|ico\\|hdf\\|edp"
 	     :publishing-function 'org-publish-attachment
 	     :exclude "ltximg/*"
 	     )

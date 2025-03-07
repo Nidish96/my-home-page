@@ -257,13 +257,6 @@ h4.DONEheader {
     border-bottom: 1px dotted #DDDDDD;
 }
 
-.orgbib {
-    background-color: #0A3F69;
-    color: #F8F8F8;
-    font-size: 24px;
-    margin: 0;
-}
-
 .outline-2 {
     width: 50vw;
 }
@@ -271,7 +264,7 @@ h4.DONEheader {
 .outline-text-2, .outline-text-3, .outline-text-4, .outline-text-5,
 .outline-3 > ul, /* for HTML export of Beamer slides */
 .outline-4 > ol, #text-footnotes {
-    margin-left: 100px;
+    margin-left: 2vw;
     
 }
 
@@ -883,4 +876,49 @@ p.verse {
 .llogo img {
     height: 70px;
     margin: -15px 0 0 -22px;
+}
+
+
+.orgbib {
+    background-color: #0A3F69;
+    color: #F8F8F8;
+    font-size: 24px;
+    margin: 0;
+    border-radius: 0.25vw;
+}
+
+/* Picture and Blurb */
+.picblurb {
+  display: flex; /* Enables flexbox for layout */
+  height: 10vw; /* Fixed height for the card */
+  border: 1px solid #ccc; /* Optional border */
+  align-items: flex-start;
+  margin: 0.5vw;
+}
+
+.picblurb .pic {
+  width: 20%; /* Fixed width for the picture */
+  height: 100%; /* Occupies full height of the card */
+  object-fit: cover; /* Ensures image covers the entire area without distortion */
+  padding: 0;
+  flex: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.pic img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding-left: 1%;
+}
+
+.blurb {
+  flex: 1; /* Allows the blurb to take up remaining space */
+  padding-top: 1%;
+  padding-left: 3%;
+  overflow-y: scroll; /* Makes the blurb content scrollable */
+  height: 95%; /* Ensures blurb takes up full card height */
 }
