@@ -53,7 +53,7 @@
 				   <li><a href=\"/~nidish/personal.html#blog-creation\" title=\"See my notes on building it\"> \
 				   Like this CSS?</a></li>\n \
 				   </ul>\n </div>\n\n \
-				   <p class=\"creator\" style=\"font-size:9px;\">Created using %c.</p>\n \
+				   <p class=\"creator\">Created using %c.</p>\n \
 				   <p class=\"date\">Last updated: %d.</p>\n\n"
 				   ))
       org-html-doctype "html5"
@@ -86,7 +86,7 @@
 	     :recursive t
 	     :base-directory "./content/"
 	     :publishing-directory "./public"
-	     :base-extension "css\\|js\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|bib\\|ico\\|hdf\\|edp"
+	     :base-extension "css\\|js\\|svg\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|bib\\|ico\\|hdf\\|edp"
 	     :publishing-function 'org-publish-attachment
 	     :exclude "ltximg/*"
 	     )

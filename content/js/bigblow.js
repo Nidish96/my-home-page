@@ -1,3 +1,4 @@
+/*global  */
 // bigblow.js --- BigBlow JS file
 //
 // Copyright (C) 2011-2016 All Right Reserved, Fabrice Niessen
@@ -76,45 +77,109 @@ function generateMiniToc(divId) {
 // display tabs
 function tabifySections() {
 
-    // hide TOC (if present)
-    $('#table-of-contents').hide();
+	// hide TOC (if present)
+	$('#table-of-contents').hide();
 
-    // grab the list of `h2' from the page
-    var allSections = [];
-    $('h2')
-        .each(function() {
-            // Remove TODO keywords and tags (contained in spans)
-            var tabText = $(this).clone().find('span').remove().end()
-                .text().trim();
-            var tabId = $(this).parent().attr('id');
-            if (tabText) {
-                // - remove heading number (all leading digits)
-                // - remove progress logging (between square brackets)
-                // - remove leading and trailing spaces
-                tabText = tabText.replace(/^\d+\s+/, '').replace(/\[[\d/%]+\]/, '').trim();
+	// grab the list of `h2' from the page
+	var allSections = [];
+	$('h2').each(function () {
+		// Remove TODO keywords and tags (contained in spans)
+		var tabText = $(this).clone().find('span').remove().end()
+			.text().trim();
+		var tabId = $(this).parent().attr('id');
+		if (tabText) {
+			// - remove heading number (all leading digits)
+			// - remove progress logging (between square brackets)
+			// - remove leading and trailing spaces
+			tabText = tabText.replace(/^\d+\s+/, '').replace(/\[[\d/%]+\]/, '').trim();
 
-                allSections.push({
-                    text: tabText,
-                    id: tabId
-                });
-            }
-        });
+			allSections.push({
+				text: tabText,
+				id: tabId
+			});
+		}
+	});
 
-    // create the tab links
-    var tabs = $('<ul id="tabs"></ul>');
-    for (i = 0; i < allSections.length; i++) {
-        var item = allSections[i];
-        html = $('<li><a href="#' + item.id + '">' + item.text + '</a></li>');
-        tabs.append(html);
-    }
+	// create the tab links
+	var tabs = $('<ul id="tabs"></ul>');
+	for (i = 0; i < allSections.length; i++) {
+		var item = allSections[i];
+		html = $('<li><a href="#' + item.id + '">' + item.text + '</a></li>');
+		tabs.append(html);
+	}
 
-    // insert tabs menu after title (`h1'), or at the beginning of the content
-    if($('h1.title').length !== 0) {
-        $('h1.title').after(tabs);
-    }
-    else {
-        $('#content').prepend(tabs);
-    }
+	const burger = $('<button id="burger" aria-label="Toggle Tabs"><img src="https://ae.iitm.ac.in/~nidish/images/burger.svg" alt="☰"></button>');
+	const currentSectionId = document.location.hash?.replace('#', '');
+	let selectedText = allSections.find(sec => sec.id === currentSectionId)?.text;
+
+	// If no hash or match found, fall back to closest section on screen
+	if (!selectedText) {
+		const scrollY = window.scrollY;
+		for (let sec of allSections) {
+			const el = document.getElementById(sec.id);
+			if (el && el.offsetTop <= scrollY + 20) {
+				selectedText = sec.text;
+			}
+		}
+	}
+
+	// Fallback to first tab if no section is matched
+	if (!selectedText) {
+		selectedText = allSections[0]?.text || '';
+	}
+
+	const selectedLabel = $('<div id="selected-tab"></div>').text(selectedText);
+
+
+	const wrapper = $('<div id="tab-wrapper"></div>')
+		.append(burger)
+		.append(selectedLabel)
+		.append(tabs);
+
+	// insert tabs menu after title (`h1'), or at the beginning of the content
+	if ($('h1.title').length !== 0) {
+		$('h1.title').after(wrapper);
+	}
+	else {
+		$('#content').prepend(wrapper);
+	}
+
+	if (window.innerWidth > 600) {
+		$('#burger').hide();
+		$('#selected-tab').hide();
+	}
+
+	// Responsive logic
+	// if (window.innerWidth <= 600 && allSections.length > 6) {
+	if (window.innerWidth <= 600) {
+		$('#tab-wrapper').addClass('mobile-tabs');
+		$('#tabs').hide();
+
+		$('#burger').show();
+		// $('#tabs').slideToggle();
+		$('#selected-tab').show();
+	}
+
+	$('#burger').click(function () {
+		$('#tabs').slideToggle();
+		$('#selected-tab').toggle();
+	});
+
+	// Update label when tab is clicked
+	$('#tabs li a').click(function () {
+		const label = $(this).text().trim();
+		$('#selected-tab').text(label);
+
+		if ($('#tab-wrapper').hasClass('mobile-tabs')) {
+			$('#tabs').hide();
+			$('#selected-tab').toggle();
+		}
+
+		// if (window.innerWidth <= 600 && allSections.length > 6) {
+		// 	$('#tabs').slideToggle();
+		// 	$('#selected-tab').toggle();
+		// }
+	});
 }
 
 function selectTabAndScroll(href) {
@@ -130,7 +195,7 @@ function selectTabAndScroll(href) {
         .index($('[aria-labelledby="' + targetTabAriaLabel + '"]'));
 
     // Activate target tab
-    $('#content').tabs('option', 'active', targetTabIndex);
+  $('#content').tabs('option', 'active', targetTabIndex);
 
     // Rebuild minitoc
     generateMiniToc(targetTabId);
@@ -149,58 +214,58 @@ function selectTabAndScroll(href) {
     }
 }
 
-$(document).ready(function() {
-    $('#preamble').remove();
-    $('#table-of-contents').remove();
+$(document).ready(function () {
+	$('#preamble').remove();
+	$('#table-of-contents').remove();
 
-    // Prepare for tabs
-    tabifySections();
+	// Prepare for tabs
+	tabifySections();
 
-    // Build the tabs from the #content div
-    $('#content').tabs();
+	// Build the tabs from the #content div
+	$('#content').tabs();
 
-    // Set default animation
-    $('#content').tabs('option', 'show', true);
+	// Set default animation
+	$('#content').tabs('option', 'show', true);
 
-    // Rebuild minitoc when a tab is activated
-    $('#content').tabs({
-        activate: function(event, ui) {
-            var divId = ui.newTab.attr('aria-controls');
-            generateMiniToc(divId);
-        }
-    });
+	// Rebuild minitoc when a tab is activated
+	$('#content').tabs({
+		activate: function (event, ui) {
+			var divId = ui.newTab.attr('aria-controls');
+			generateMiniToc(divId);
+		}
+	});
 
-    // Required to get the link of the tab in URL
-    $('#content ul').localScroll({
-        target: '#content',
-        duration: 0,
-        hash: true
-    });
+	// Required to get the link of the tab in URL
+	$('#content ul').localScroll({
+		target: '#content',
+		duration: 0,
+		hash: true
+	});
 
-    // Handle hash in URL
-    if ($('#content') && document.location.hash) {
-        hsExpandAnchor(document.location.hash);
-        selectTabAndScroll(document.location.hash);
-    }
-    // If no hash, build the minitoc anyway for selected tab
-    else {
-        var divId = $('#content div[aria-expanded=true]').attr('id');
-        generateMiniToc(divId);
-    }
+	// Handle hash in URL
+	if ($('#content') && document.location.hash) {
+		hsExpandAnchor(document.location.hash);
+		selectTabAndScroll(document.location.hash);
+	}
+	// If no hash, build the minitoc anyway for selected tab
+	else {
+		var divId = $('#content div[aria-expanded=true]').attr('id');
+		generateMiniToc(divId);
+	}
 
-    // Handle click on internal links
-    $('.ui-tabs-panel a[href^="#"]').click(function(e) {
-        var href = $(this).attr('href');
-        hsExpandAnchor(href);
-        selectTabAndScroll(href);
-        e.preventDefault();
-    });
+	// Handle click on internal links
+	$('.ui-tabs-panel a[href^="#"]').click(function (e) {
+		var href = $(this).attr('href');
+		hsExpandAnchor(href);
+		selectTabAndScroll(href);
+		e.preventDefault();
+	});
 
-    // Initialize hideShow
-    hsInit();
+	// Initialize hideShow
+	hsInit();
 
-    // add sticky headers to tables
-    $('table').stickyTableHeaders();
+	// add sticky headers to tables
+	$('table').stickyTableHeaders();
 });
 
 $(document).ready(function() {
@@ -326,7 +391,13 @@ function orgDefkey(e) {
         break;
     case ">": // scroll to bottom
         $(window).scrollTop($(document).height());
-        break;
+      break;
+    case "j":
+      window.scrollBy({top:100, behavior:'smooth'});
+      break;
+    case "k":
+      window.scrollBy({top:-100, behavior:'smooth'});
+      break;      
     case "-": // collapse all
         hsCollapseAll();
         break;
@@ -347,12 +418,71 @@ function orgDefkey(e) {
     //     break;
     // case "q": // quit reviewing
     //     hsReviewTaskQuit();
-    //     break;
+      //     break;
     case "g": // refresh the page (from the server, rather than the cache)
         location.reload(true);
-        break;
+      break;
     }
 }
 
 // document.onkeypress = orgDefkey;
 document.addEventListener('keypress', (e)=>orgDefkey(e))
+
+// Lightbox modal
+document.addEventListener("DOMContentLoaded", function () {
+	// Get all elements with class "picblurb"
+	const picblurbs = document.querySelectorAll(".picblurb");
+
+	// Add click listener to each one
+	picblurbs.forEach(function (element) {
+		element.addEventListener("click", function () {
+			openModal(this);
+		});
+	});
+});
+
+function openModal(element) {
+	const modal = document.getElementById("modal");
+	const modalBody = document.getElementById("modal-body");
+
+	// Clone the clicked element's content into the modal
+	modalBody.innerHTML = element.innerHTML;
+	modal.style.display = "block";
+}
+
+function closeModal() {
+	document.getElementById("modal").style.display = "none";
+}
+
+// Optional: Close when clicking outside the modal content
+window.onclick = function (event) {
+	const modal = document.getElementById("modal");
+	if (event.target === modal) {
+		modal.style.display = "none";
+	}
+}
+
+// Responsive Tabs Update 
+function updateResponsiveTabs() {
+  const isMobile = window.innerWidth <= 600;
+  const hasManyTabs = $('#tabs li').length > 6;
+
+  // if (isMobile && hasManyTabs) {
+  if (isMobile && hasManyTabs) {
+    $('#tab-wrapper').addClass('mobile-tabs');
+    $('#tabs').hide();
+    $('#selected-tab').show();
+    $('#burger').show();
+  } else {
+    $('#tab-wrapper').removeClass('mobile-tabs');
+    $('#tabs').show();
+    $('#selected-tab').hide(); // optional
+    $('#burger').hide();
+  }
+}
+
+// // Run it after setting up tabs
+// updateResponsiveTabs();
+
+// Also run it whenever the window is resized
+$(window).on('resize', updateResponsiveTabs);

@@ -157,7 +157,7 @@ html {
 
 #footer {
     margin: 12px auto 12px auto;
-    width: 680px;
+    width: 100vw;
     font-size: 14px;
     position: relative;
     margin-top: 20px;
@@ -180,12 +180,20 @@ p.author, p.date, p.creator, p.xhtml-validation {
     padding: 0x 12px 0px 0px;
     position: relative;
     margin-top: -10px;
+    transform: translateY(0.8vh);
+}
+
+p.creator a {
+    background-color: #67B3E3;
+    text-decoration: underline;
+    vertical-align: middle;
+    color: #0a3f69;
 }
 
 body {
     color: #333333;
     font: 13px/1.385 arial,helvetica,clean,sans-serif;
-    margin: 0 .1em;
+    /* margin: 0 .1em; */
     padding: 0;
 }
 
@@ -887,14 +895,36 @@ p.verse {
     border-radius: 0.25vw;
 }
 
+.bibtex_search {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding: 6px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
 /* Picture and Blurb */
 .picblurb {
   display: flex; /* Enables flexbox for layout */
   height: 10vw; /* Fixed height for the card */
-  border: 1px solid #ccc; /* Optional border */
+  border: 1px solid #B5DAF1; /* Optional border */
   align-items: flex-start;
   margin: 0.5vw;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  cursor: pointer; /* makes it feel clickable */
+
+  border-radius: 0.25vw;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
 }
+
+.picblurb:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px); /* slight lift */
+    background-color: #fafafa;  /* very light highlight */
+}
+
 
 .picblurb .pic {
   width: 20%; /* Fixed width for the picture */
@@ -905,10 +935,12 @@ p.verse {
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .pic img {
-    width: 90%;
+    width: 95%;
     height: 100%;
     object-fit: cover;
     object-position: center;
@@ -921,4 +953,203 @@ p.verse {
   padding-left: 3%;
   overflow-y: scroll; /* Makes the blurb content scrollable */
   height: 95%; /* Ensures blurb takes up full card height */
+}
+
+.picblurb .vpic {
+  width: 20%; /* Fixed width for the picture */
+  height: 100%; /* Occupies full height of the card */
+  object-fit: cover; /* Ensures image covers the entire area without distortion */
+  padding: 0;
+  flex: none;
+  display: flex;
+  align-items: center;
+  overflow-y: scroll;  
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.vpic img {
+ 
+   width: 95%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding-left: 1%;
+}
+
+/* Lightbox modal */
+
+
+/* Modal Styles */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: -1%;
+  right: 2%;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* picblurb-container */
+.picblurb-container {
+    width: 100vw;
+    position: relative;
+    margin-left: -50%;
+    margin-right: -50%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.picblurb-container .picblurb {
+    width: 25vw;
+}
+
+.picblurb-container .picblurb .vpic {
+    width: 50%;
+}
+.picblurb-container .picblurb .pic {
+    width: 40%;
+}
+.picblurb-container .picblurb .pic img {
+    width: 90%;
+}
+
+@media (max-width: 600px) {
+    .lmargin, .rmargin {
+	display: none;
+    }
+    
+    .outline-2 {
+        width: 100%;
+    }
+    
+    .picblurb-container {
+        margin-left: 0%;
+        margin-right: 0%;
+	width: 100%;
+    }
+
+    #footer {
+	font-size: 2.5vw;
+    }
+
+    .picblurb {
+        height: 13vh;
+    }
+    
+    .picblurb-container .picblurb {
+        width: 47vw;
+        height: 10vh;
+        font-size: 70%;
+    }
+
+    #bibtex_display {
+	margin-left: 6%;
+	margin-right: 2%;
+	font-size: 80%;
+    }
+
+    .bibtex_search {
+	margin-top: 2vh;
+    }
+
+    p.author, p.date, p.creator, p.xhtml-validation {
+	font-size: 1.5vw;
+	padding-bottom: 0.2vh;
+	padding-right: 4vw;
+    }
+
+    .outline-text-2 {
+	margin-top: 2vh;
+    }
+}    
+
+/* Burger Button */
+
+@media (max-width: 600px) {
+    #selected-tab, #burger {
+	display: unset;
+    }
+
+    #burger {
+	background-color: #007acc; /* Nice blue */
+	color: white;
+	padding: 3px 5px;
+	border: none;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+    }
+    #burger:hover {
+	background-color: #005a99;
+    }    
+    
+    #selected-tab {
+        padding-left: 4vw;
+	font-weight: bolder;
+    }
+    
+    #tabs {
+        /* flex-direction: column; */
+    }    
+    
+    #tab-wrapper {
+        background-color: #2061A2;
+        width: 100vw;
+        color: white;
+	display: flex;
+	justify-content: center;
+	font-size: 1rem;
+	font-weight: bold;
+    }
+
+    h2 {
+	display: none;
+    }
+
+    #minitoc h2 {
+	display: unset;
+    }
+
+    #tab-wrapper.mobile-tabs {
+	min-height: 2.5vh;
+    }
+    #burger {
+	position: absolute;
+	left: 0vw;
+	height: 2.5vh;
+    }
+    #burger img {
+        width: 2vh;
+    }
 }
