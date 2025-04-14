@@ -16,4 +16,4 @@
 
 #+html_head: <script type="text/javascript" defer src="./js/hideshow.js"></script>
 #+html_head: <script type="text/javascript" defer src="./js/bigblow.js"></script>
-#+html_head: <script type="text/javascript" defer src="./js/linkhighlight.js"></script>
+# #+html_head: <script type="text/javascript" defer src="./js/linkhighlight.js"></script>

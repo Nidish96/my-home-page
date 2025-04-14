@@ -39,6 +39,14 @@
 (defun org-babel-execute:inline-js (body _params)
   (format "<script type=\"text/javascript\">\n%s\n</script>" body))
 
+;; Setup Inline-css
+(add-to-list 'org-src-lang-modes '("inline-css" . css))
+(defvar org-babel-default-header-args:inline-css
+  '((:results . "html")
+    (:exports . "results")))
+(defun org-babel-execute:inline-css (body _params)
+  (format "<style type=\"text/css\">\n%s\n</style>" body))
+
 ;; Customize the HTML output
 (setq org-html-validation-link nil
       org-html-head-include-scripts nil

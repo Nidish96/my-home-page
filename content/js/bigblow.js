@@ -165,6 +165,11 @@ function tabifySections() {
 		$('#selected-tab').toggle();
 	});
 
+	$('#selected-tab').click(function () {
+		$('#tabs').slideToggle();
+		$('#selected-tab').toggle();
+	});
+
 	// Update label when tab is clicked
 	$('#tabs li a').click(function () {
 		const label = $(this).text().trim();
@@ -430,28 +435,28 @@ document.addEventListener('keypress', (e)=>orgDefkey(e))
 
 // Lightbox modal
 document.addEventListener("DOMContentLoaded", function () {
-	// Get all elements with class "picblurb"
-	const picblurbs = document.querySelectorAll(".picblurb");
+  // Get all elements with class "picblurb"
+  const picblurbs = document.querySelectorAll(".picblurb");
 
-	// Add click listener to each one
-	picblurbs.forEach(function (element) {
-		element.addEventListener("click", function () {
-			openModal(this);
-		});
-	});
+  // Add click listener to each one
+  picblurbs.forEach(function (element) {
+    element.addEventListener("click", function () {
+      openModal(this);
+    });
+  });
 });
 
 function openModal(element) {
-	const modal = document.getElementById("modal");
-	const modalBody = document.getElementById("modal-body");
+  const modal = document.getElementById("modal");
+  const modalBody = document.getElementById("modal-body");
 
-	// Clone the clicked element's content into the modal
-	modalBody.innerHTML = element.innerHTML;
-	modal.style.display = "block";
+  // Clone the clicked element's content into the modal
+  modalBody.innerHTML = element.innerHTML;
+  modal.style.display = "block";
 }
 
 function closeModal() {
-	document.getElementById("modal").style.display = "none";
+  document.getElementById("modal").style.display = "none";
 }
 
 // Optional: Close when clicking outside the modal content
@@ -468,7 +473,7 @@ function updateResponsiveTabs() {
   const hasManyTabs = $('#tabs li').length > 6;
 
   // if (isMobile && hasManyTabs) {
-  if (isMobile && hasManyTabs) {
+  if (isMobile) {
     $('#tab-wrapper').addClass('mobile-tabs');
     $('#tabs').hide();
     $('#selected-tab').show();

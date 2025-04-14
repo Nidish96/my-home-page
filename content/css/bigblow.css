@@ -1006,8 +1006,8 @@ p.verse {
 
 .close {
   position: absolute;
-  top: -1%;
-  right: 2%;
+  top: -5px;
+  left: 1%;
   color: #aaa;
   font-size: 28px;
   font-weight: bold;
@@ -1015,7 +1015,7 @@ p.verse {
 }
 
 .close:hover {
-  color: #000;
+  color: #025D8E;
 }
 
 /* picblurb-container */
@@ -1099,6 +1099,7 @@ p.verse {
 @media (max-width: 600px) {
     #selected-tab, #burger {
 	display: unset;
+	cursor: pointer;
     }
 
     #burger {
@@ -1108,14 +1109,12 @@ p.verse {
 	border: none;
 	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 	transition: background-color 0.3s ease;
-	cursor: pointer;
     }
     #burger:hover {
 	background-color: #005a99;
     }    
     
     #selected-tab {
-        padding-left: 4vw;
 	font-weight: bolder;
     }
     

@@ -1316,8 +1316,8 @@ _Links_
       <span class="year"></span>, 
     </span>
     <span class="author"></span>
-    <span class="if url" style="margin-left: 20px">
-      <a class="url" style="color:red; font-size:10px">(view online)</a>
+    <span class="if doi" style="margin-left: 10px">
+      <a class="doi" style="color:red">(view online)</a>
     </span>
   </div>
 
@@ -1517,13 +1517,9 @@ _Links_
 
 * Footer Scripts                                                     :ignore:
 #+attr_html: :id modal
-#+begin_modal 
+#+begin_modal
 #+begin_modal-content
-#+attr_html: :onclick closeModal()
-#+begin_close
-\(\times\)   
-#+end_close
-
+#+html: <span class="close" onclick="closeModal()">&times;</span>
 #+attr_html: :id modal-body
 #+begin_modal-body
 #+end_modal-body
@@ -1536,7 +1532,6 @@ _Links_
       // Underline my Name in the text
       var strs = $('.author');
       var myname = ['Nidish Narayanaa Balaji', 'Balaji, Nidish Narayanaa'];
-      // var regex = [new RegExp(myname[0], 'gi'), new RegExp(myname[1], 'gi')]
 
       var originalText;
       var underlinedText;
@@ -1551,35 +1546,11 @@ _Links_
           }
           strs[i].innerHTML = underlinedText;
       }
-      // console.log('hey')
   }
-  document.addEventListener("click", underlinemyname);
-  document.addEventListener("keypress", underlinemyname);
-
-  // document.onkeypress = function (event) {    
-  //     if (event.target.tagName.toLowerCase() !== 'input') {orgDefkey(event);}
-  // };
-
-  // Profile images
-  function setupprofileimgs()
-  {
-      var pmgs = $('img.profile');
-      for (var i = 0; i < pmgs.length; i++) {
-          var hgt = pmgs[i].parentElement.parentElement.nextElementSibling.offsetHeight;
-          pmgs[i].style.setProperty("height", hgt + "px");
-          pmgs[i].style.setProperty("float", "left");
-          pmgs[i].style.setProperty("clear", "left");
-          pmgs[i].style.setProperty("margin-left",
-                                    "-" + 1.1*pmgs[i].offsetWidth + "px");
-      }
-  }
-  window.addEventListener('resize', setupprofileimgs);
-  document.addEventListener('readystatechange', setupprofileimgs); 
-  setupprofileimgs();
+  window.onload = function () { underlinemyname(); };
 #+end_src
 
-#+begin_export html
-<style>
+#+begin_src inline-css
   h1::before {
       background-image: url('./images/iitm-logo.png');
       background-size: 82px 86px;
@@ -1621,5 +1592,4 @@ _Links_
   div.sort.year {
   padding-top: 1vh;
   } 
-</style>
-#+end_export
+#+end_src
