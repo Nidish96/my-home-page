@@ -48,6 +48,33 @@ You can have a look at the research tab to get a general sense of the
 types of projects we like to work on. However, we are not closed to
 suggestions for new topics/areas! :)
 
+** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb-container
+:END:
+
+*** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:CUSTOM_ID: nidish
+:END:
+
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+
+[[file:images/research/tdecomp.png]]
+
+**** Here is the blurb
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+
+You can have a look at the research tab to get a general sense of the
+types of projects we like to work on. However, we are not closed to
+suggestions for new topics/areas! :)
+
 ** Opportunities to Join the Lab (Dated: <2025-02-16 Sun>)
 
 I'm presently looking for
@@ -456,7 +483,6 @@ better.
 _Links_
 + Research conducted in collaboration with [[https://scholar.google.com/citations?user=XRl1tHkAAAAJ&hl=en][Prof. D. Dane Quinn at the
   University of Akron]].
-
   
 ** Past Research
 
@@ -728,15 +754,26 @@ Some topical areas include:
 
 The following is a (non-exhaustive) list of specific projects I plan
 to actively seek funding for in the short-term:
-#+begin_picblurb-container
-#+attr_html: :id slowfast
-#+begin_picblurb
-#+begin_vpic
-[[file:images/research/tdecomp.png]]
-#+end_vpic
 
-#+begin_blurb   
-*Direct-Envelope Identification for Nearly Periodic Processes*
+*** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb-container
+:END:
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+
+[[file:images/research/tdecomp.png]]
+
+***** Direct-Envelope Identification for Nearly Periodic Processes
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 In a lot of practical problems involving systems undergoing periodic
 or nearly periodic excitation/response, the response can be described
@@ -755,17 +792,23 @@ envelope of the process. Being slowly evolving processes, it must be
 possible to sample these at much smaller intervals. The research
 question here is: _Knowing the periodicity properties of a system, can
 we reconstruct the vibration envelope using undersampled data?_
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id tsdec
-#+begin_picblurb
-#+begin_vpic
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+
 [[file:images/research/tdecomp.png]]
-#+end_vpic
 
-#+begin_blurb 
-*Time Scale Decomposition for Thermo-Mechanical Problems*
+***** Time Scale Decomposition for Thermo-Mechanical Problems
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 A fundamental observation that can be made in thermo-mechanical
 vibration problems is that the *elastic/mechanical portion* of the
@@ -782,19 +825,25 @@ vibrations.\\
 Mathematically this will be achieved by using a singular perturbation
 framework leading to harmonic balance for the vibrations and a first
 order system for the slow dynamics.
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id roughsurf
-#+begin_picblurb
-#+begin_vpic
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+
 [[file:images/research/roughovw.png]]
 
 [[file:images/research/stochsurf.png]]
-#+end_vpic
 
-#+begin_blurb 
-*Stochastic Process Approaches For Predictive Constitutive and Damage Modeling of Rough Surfaces*
+***** Stochastic Process Approaches For Predictive Constitutive and Damage Modeling of Rough Surfaces
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 Modeling rough surfaces as stochastic processes has been shown to lead
 to scale-independent descriptions of rough surfaces. We argue here
@@ -815,19 +864,25 @@ With the pursuit of this project, I hope to develop a clearer
 description of the different scales in the description of a rough
 surface and their relative contributions to the overall ("macro")
 dynamics of a jointed system.
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id rom
-#+begin_picblurb
-#+begin_vpic 
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+
 [[file:images/research/hred1.png]]
 
 [[file:images/research/hred2.png]]
-#+end_vpic
 
-#+begin_blurb 
-*Reduced Order Modeling of Structures with Frictional and Geometric Nonlinearities*
+***** Reduced Order Modeling of Structures with Frictional and Geometric Nonlinearities
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 In most applications involving frictional interfaces coupled to
 geometrically nonlinear sub-domains (panels riveted/bolted at its
@@ -846,17 +901,22 @@ computational performance in contact problems. Unlike earlier studies,
 I hope to directly use the governing partial differential equations
 for conducting the mesh-refinements, rather than using a finely
 resolved finite element mesh as reference.
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id nlmtesting
-#+begin_picblurb
-#+begin_vpic
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
 [[file:images/research/rubbersetup.png]]
-#+end_vpic
 
-#+begin_blurb 
-*Nonlinear Modal Testing as the Next Paradigm in Industrial Modal Analysis*
+***** Nonlinear Modal Testing as the Next Paradigm in Industrial Modal Analysis
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 Nonlinear Modal Analysis has gradually started becoming reasonably
 mature in academic circles over the last two decades. Unlike linear
@@ -880,17 +940,23 @@ least 3 candidates):
   cases;
 + Addressing lingering theoretical questions pertaining to
   mode-mixing, modal interference, etc.
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id wbmmod
-#+begin_picblurb
-#+begin_vpic 
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+
 [[file:images/research/wbm.png]]
-#+end_vpic
 
-#+begin_blurb 
-*Wave-Expansion Modeling of Rotors, Frames, etc.*
+***** Wave-Expansion Modeling of Rotors, Frames, etc.
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 We recently developed a suite of wave-based analysis tools (see [[https://nidish96.github.io/wavevib][here]]
 for a MATLAB/OCTAVE toolbox) that are generally applicable for
@@ -907,23 +973,34 @@ We are looking to demonstrate the applicability of this method to
 
 Theoretically, we are also trying to see if an averaging concept is
 applicable to analyze the stability of the resulting solutions. 
-#+end_blurb
-#+end_picblurb
-#+end_picblurb-container
 
 ** Ongoing Projects
 
 Here is a list of on-going projects at various stages of completion.
-#+begin_picblurb-container 
-#+attr_html: :id linlof
-#+begin_picblurb
-#+begin_vpic 
+
+*** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb-container
+:END:
+
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+
 [[file:images/research/phbresp.png]]
 
 [[file:images/research/phbevs.png]]
-#+end_vpic
-#+begin_blurb 
-*Neimark-Sacker Bifurcations in Forced-Self Excited Frictional Systems*
+
+***** Neimark-Sacker Bifurcations in Forced-Self Excited Frictional Systems
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 Self excitation is often observed in aeroelastic systems where the
 aerodynamic influences lead to energy being added into the sytem in a
@@ -938,18 +1015,26 @@ stability analysis eventhough the systems are fundamentally non-smooth
 _Links_
 + Research conducted in collaboration with [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][Prof. Malte Krack at the
   University of Stuttgart]].
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id randomexc
-#+begin_picblurb
-#+begin_vpic 
+  
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+
 [[file:images/research/fpesynth.png]]
 
 [[file:images/research/rubbersetup.png]]
-#+end_vpic
-#+begin_blurb 
-*Application of Nonlinear Modal Methods for Narrow-Band Random Excitation*
+
+***** Application of Nonlinear Modal Methods for Narrow-Band Random Excitation
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 Thus far, nonlinear modal methods have found applications only in
 periodic response regimes. We are trying to understand the efficacy in
@@ -963,16 +1048,23 @@ probability density of the envelopes directly.
 _Links_
 + Research conducted in collaboration with [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][Prof. Malte Krack at the
   University of Stuttgart]]. 
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id hystid
-#+begin_picblurb 
-#+begin_vpic 
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+
 [[file:images/research/hysts.png]]
-#+end_vpic
-#+begin_blurb 
-*Identification of Micro-Slip Hysteretic Models from Frictional Response Measurements*
+
+***** Identification of Micro-Slip Hysteretic Models from Frictional Response Measurements
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 We deal with the fundamental problem of identifying hysteretic models
 that best fit measurements made from a tribometer developed at the
@@ -983,16 +1075,23 @@ epistemic issues characteristic of friciton modeling.
 _Links_
 + Research conducted in collaboration with [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][Prof. Malte Krack at the
   University of Stuttgart]]. 
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id avstab
-#+begin_picblurb
-#+begin_vpic 
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+
 [[file:images/research/avstab.png]]
-#+end_vpic
-#+begin_blurb 
-*An Averaging Approach for the Stability of Periodic Responses*
+
+***** An Averaging Approach for the Stability of Periodic Responses
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 Pursuing the spirit of the method of multiple scales and time-scale
 decomposition, we have shown that it is indeed possible to rigorously
@@ -1005,13 +1104,16 @@ making it more generally applicable.
 _Links_
 + Research conducted in collaboration with [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][Prof. Malte Krack at the
   University of Stuttgart]]. 
-#+end_blurb
-#+end_picblurb
+  
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
 
-#+attr_html: :id mmodes
-#+begin_picblurb 
-#+begin_blurb 
-*Modal Interactions in the Presence of Multiple Nonlinear Modes*
+***** Modal Interactions in the Presence of Multiple Nonlinear Modes
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 Accounting for the coexistence of multiple nonlinear modes in a single
 response has been an enduring problem in the nonlinear modal analysis
@@ -1023,21 +1125,31 @@ better.
 _Links_
 + Research conducted in collaboration with [[https://scholar.google.com/citations?user=XRl1tHkAAAAJ&hl=en][Prof. D. Dane Quinn at the
   University of Akron]].
-#+end_blurb
-#+end_picblurb
-#+end_picblurb-container
 
 ** Past Research
-#+begin_picblurb-container
-#+attr_html: :id qphyst
-#+begin_picblurb
-#+begin_vpic 
+
+*** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb-container
+:END:
+
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
 [[file:images/research/2dmarch.png]]
 
 [[file:images/research/qpresp.png]]
-#+end_vpic
-#+begin_blurb 
-*Torus-Time Marching for the Evaluation of Hystereses Under Quasi-Periodic Responses*
+
+***** Torus-Time Marching for the Evaluation of Hystereses Under Quasi-Periodic Responses
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 Hysteretic forces (specifically rate-independent laws) are often
 represented as differential relationships. Evaluation of these
@@ -1051,18 +1163,24 @@ multi-frequency "quasi-periodic" case.
 _Links_
 + Research conducted as part of PostDoc with [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][Prof. Malte Krack at the University of Stuttgart]].
 + [[doi:10.1016/j.jsv.2024.118570][Link to paper]].
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id spident
-#+begin_picblurb 
-#+begin_vpic 
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
 [[file:images/research/cbm.jpg]]
 
 file:images/research/cbmresp.png]]
-#+end_vpic
-#+begin_blurb 
-*A Sparse Parameterized Identification Approach for Weakly Nonlinear Systems*
+
+***** A Sparse Parameterized Identification Approach for Weakly Nonlinear Systems
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 Decoupling the dynamics of a weakly nonlinear oscillator into
 fast-varying dynamics and slowly-varying amplitudes leads to a
@@ -1083,18 +1201,24 @@ weakly non-linear systems.
 
 _Links_
 + Research conducted in collaboration with [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at Rice University]].
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id wbmpaper
-#+begin_picblurb
-#+begin_vpic 
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
 [[file:images/research/wbm.png]]
 
 [[file:images/research/wbaft.png]]
-#+end_vpic
-#+begin_blurb
-*Wave-Based Modeling for the Periodic Response and Stability Analysis of Jointed 1D Structures*
+
+***** Wave-Based Modeling for the Periodic Response and Stability Analysis of Jointed 1D Structures
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 In this work we developed a suite of techniques, based on wave
 propagation representations on 1D bars and beams, to analyse the
@@ -1118,17 +1242,23 @@ _Links_
 + Research conducted in collaboration with [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at Rice
   University]] and [[https://www.me.gatech.edu/faculty/leamy][Prof. Mike Leamy at Georgia Tech]].
 + Links to paper: [[doi:10.1007/s11071-022-07765-0][Part-1]] and [[doi:10.1007/s11071-022-07969-4][Part-2]].
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id deepdic
-#+begin_picblurb
-#+begin_vpic
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
 #+caption: Figure from Yang et al., 2021.
 [[file:images/research/deepdic.png]]
-#+end_vpic
-#+begin_blurb
-*A Deep Neural Network Approach for Experimental Modal Analysis Using Video Measurements*
+
+***** A Deep Neural Network Approach for Experimental Modal Analysis Using Video Measurements
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 Digital Image Correlation (DIC) has emerged as the new standard in
 video-based vibration testing. In this work, we established, firstly,
@@ -1145,16 +1275,22 @@ in computational performance.
 _Links_
 + Research conducted as part of PostDoc with [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at
   Rice University]].
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id nonuniq
-#+begin_picblurb
-#+begin_vpic 
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
 [[file:images/research/nonuniq.png]]
-#+end_vpic
-#+begin_blurb 
-*A Stochastic Approach for the Quantification of the Effects of Non-Unique Residual Tractions in Frictional Systems*
+
+***** A Stochastic Approach for the Quantification of the Effects of Non-Unique Residual Tractions in Frictional Systems
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 Frictional interfaces are classically known to be statically
 indeterminate under nominal loads (until the "slip limit"). For
@@ -1170,19 +1306,24 @@ non-uniqueness is most pronounced in the micro-slip regime.
 
 _Links_
 + Research conducted in collaboration with [[https://scholar.google.com/citations?user=dFpmPD0AAAAJ&hl=en][Dr. Erhan Ferhatoglu]].
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id ltermw
-#+begin_picblurb
-#+begin_vpic
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
 [[file:images/research/roughovw.png]]
 
 [[file:images/research/brb.png]]
-#+end_vpic
 
-#+begin_blurb 
-*Long-Term Evolution of the Dynamics of Jointed Structures*
+***** Long-Term Evolution of the Dynamics of Jointed Structures
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 Wear and friction related damage is a rather obvious expectation from
 mechanical joints. Capturing such phenomena quantitatively is,
@@ -1200,18 +1341,24 @@ _Links_
 + Research conducted in collaboration with [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at Rice
   University]] and [[https://home.norwich.edu/people/scott-smith-phd][Dr. Scott A. Smith at Norwich University]].
 + [[doi:10.1007/978-3-031-04086-3_41][Conference paper]] presented at IMAC 2023.
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id tmdpce
-#+begin_picblurb
-#+begin_vpic 
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
 [[file:images/research/brb.png]]
 
 [[file:images/research/dflux.png]]
-#+end_vpic
-#+begin_blurb 
-*Multi-Scale Modeling of Bolted Joints with Uncerainty Quantification*
+
+***** Multi-Scale Modeling of Bolted Joints with Uncerainty Quantification
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 We applied a statistical rough contact approach to conduct predictive
 nonlinear modal analysis of a bolted structure and compared this
@@ -1223,18 +1370,24 @@ _Links_
 + Research conducted as part of PhD under [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at Rice University]].
 + [[https://repository.rice.edu/items/196c45a0-37f5-47ec-9988-7707513c1a7f][Link to PhD thesis]]: /"Dissipative Dynamics of Bolted Joints"/.
 + [[https://scholarship.rice.edu/handle/1911/108297][Link to MS thesis]]: /"Multi-Scale Modeling in Bolted Interfaces"/.  
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id hred
-#+begin_picblurb
-#+begin_vpic 
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
 [[file:images/research/hred1.png]]
 
 [[file:images/research/hred2.png]]
-#+end_vpic
-#+begin_blurb 
-*Hyper-Reduction for Jointed Interfaces*
+
+***** Hyper-Reduction for Jointed Interfaces
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 Hyper-reduction in the context of Reduced Order Modeling (ROM) refers
 to the development of ROMs wherein the model evaluation can be
@@ -1267,16 +1420,22 @@ _Links_
   [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at Rice University]] in collaboration with
   [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][Prof. Malte Krack at the University of Stuttgart]].
 + [[doi:10.1016/j.ymssp.2020.107249][Link to paper]].
-#+end_blurb
-#+end_picblurb
 
-#+attr_html: :id rqnm
-#+begin_picblurb
-#+begin_vpic 
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
 [[file:images/research/rqnm.png]]
-#+end_vpic
-#+begin_blurb 
-*A Quasi-Static Generalization of Rayleigh Quotient Extremality for Nonlinear Modal Analysis*
+
+***** A Quasi-Static Generalization of Rayleigh Quotient Extremality for Nonlinear Modal Analysis
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
 The most popular techniques for nonlinear modal analysis involve
 either transient shooting or Harmonic balance (which also involves
@@ -1299,10 +1458,7 @@ congruence with linear vibrations (where $\lambda=\omega_n^2$).
 
 _Links_
 + Research conducted as part of PhD under [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at Rice University]].
-+ [[doi:10.1016/j.compstruc.2019.106184][Link to paper]].  
-#+end_blurb
-#+end_picblurb
-#+end_picblurb-container
++ [[doi:10.1016/j.compstruc.2019.106184][Link to paper]].
 
 * Publications
 :PROPERTIES:
@@ -1397,113 +1553,146 @@ _Links_
 :PROPERTIES:
 :CUSTOM_ID: sec-members
 :END:
-#+begin_picblurb
-  #+begin_vpic
-  #+caption: Nidish Narayanaa Balaji: [[file:personal.org][Personal Website]], [[https://scholar.google.com/citations?user=57kAXckAAAAJ][Google Scholar]], [[https://www.researchgate.net/profile/Nidish-Narayanaa-Balaji][ResearchGate]], [[file:images/Nidish_CV.pdf][Link to CV]]
-  [[file:images/me2c_apr2024.png]]
-  #+end_vpic
 
-  #+begin_blurb
-  *Nidish Narayanaa Balaji (PI)*
-  
-  Assistant Professor in the [[http://www.ae.iitm.ac.in/][Aerospace Engineering Department]] at
-  IIT-Madras since 2024.
-  
-  *Contact Details*
-  + *Email*: [[mailto:nidish@iitm.ac.in][nidish@iitm.ac.in]]
-  + *Office*: Room 139, Department of
-    Aerospace Engineering
-  + *Phone*: 044-2257-4042
+** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
 
-  *Educational Background:*
-  + B.Tech. in Aerospace Engineering (2013-2017): [[https://www.iist.ac.in/][Indian Institute of Space Science and Technology, Thiruvananthapuram, IN]]. 
-  + M.S. and PhD. in Mechanical Engineering (2017-2021): [[https://www.rice.edu/][Rice Universit, Houston, TX, USA]].
-  + Postdoctoral researcher at [[https://www.rice.edu/][Rice University]] Mechanical Engineering (2021-2022).
-  + [[https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship][Humboldt postdoctoral researcher]] at the [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][University of Stuttgart (ILA)]] (2022-2024).
+*** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+
+#+caption: Nidish Narayanaa Balaji: [[file:personal.org][Personal Website]], [[https://scholar.google.com/citations?user=57kAXckAAAAJ][Google Scholar]], [[https://www.researchgate.net/profile/Nidish-Narayanaa-Balaji][ResearchGate]], [[file:images/Nidish_CV.pdf][Link to CV]]
+[[file:images/me2c_apr2024.png]]
+
+*** Nidish Narayanaa Balaji (PI)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
   
-  *Awards and Recognitions*
-  + Awarded the [[color:blue][Alexander von Humboldt Postdoctoral Fellowship]]
-    for conducting research at the University of Stuttgart, hosted by
-    Prof. Malte Krack.  
-  + Awarded the [[color:blue][2020-2021 Emmett T. and Geraldyne Smith Roberts Award]] by
-    the Department of Mechanical Engineering, Rice University "/to
-    recognize a graduate student that has demonstrated academic
-    achievement and outstanding quality of research./" 
-  + Awarded the [[color:blue][Resiliency Award]] from the AMPT Center, Rice University
-    (Additive Manufacturing, Performance and Tribology center) during
-    the 2020 AMPT Symposium for "/demonstrating exceptional resilience
-    in research in the face of challenges posed by COVID-19/". 
-  + Awarded the [[color:blue][Ken Kennedy-Cray Inc. Fellowship]] for the
-    academic year 2019/20 by the Ken Kennedy Institute, Rice University,
-    for "/the development of High-Performance codes for Joint Dynamics/".    
-  #+end_blurb
-#+end_picblurb
+Assistant Professor in the [[http://www.ae.iitm.ac.in/][Aerospace Engineering Department]] at
+IIT-Madras since 2024.
+  
+*Contact Details*
++ *Email*: [[mailto:nidish@iitm.ac.in][nidish@iitm.ac.in]]
++ *Office*: Room 139, Department of
+  Aerospace Engineering
++ *Phone*: 044-2257-4042
+
+*Educational Background:*
++ B.Tech. in Aerospace Engineering (2013-2017): [[https://www.iist.ac.in/][Indian Institute of Space Science and Technology, Thiruvananthapuram, IN]]. 
++ M.S. and PhD. in Mechanical Engineering (2017-2021): [[https://www.rice.edu/][Rice Universit, Houston, TX, USA]].
++ Postdoctoral researcher at [[https://www.rice.edu/][Rice University]] Mechanical Engineering (2021-2022).
++ [[https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship][Humboldt postdoctoral researcher]] at the [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][University of Stuttgart (ILA)]] (2022-2024).
+  
+*Awards and Recognitions*
++ Awarded the [[color:blue][Alexander von Humboldt Postdoctoral Fellowship]]
+  for conducting research at the University of Stuttgart, hosted by
+  Prof. Malte Krack.  
++ Awarded the [[color:blue][2020-2021 Emmett T. and Geraldyne Smith Roberts Award]] by
+  the Department of Mechanical Engineering, Rice University "/to
+  recognize a graduate student that has demonstrated academic
+  achievement and outstanding quality of research./" 
++ Awarded the [[color:blue][Resiliency Award]] from the AMPT Center, Rice University
+  (Additive Manufacturing, Performance and Tribology center) during
+  the 2020 AMPT Symposium for "/demonstrating exceptional resilience
+  in research in the face of challenges posed by COVID-19/". 
++ Awarded the [[color:blue][Ken Kennedy-Cray Inc. Fellowship]] for the
+  academic year 2019/20 by the Ken Kennedy Institute, Rice University,
+  for "/the development of High-Performance codes for Joint Dynamics/".    
+
+**                                                                  :ignore:
 + Applications welcome - [[mailto:nidish@iitm.ac.in][Just email me!]]
 ** M.Tech. Students
-#+begin_picblurb-container 
-#+begin_picblurb
-  #+begin_pic
-  [[file:images/stub.png]]
-  #+end_pic
+*** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb-container
+:END:
 
-  #+begin_blurb
-  *Charan Kumar* (M.Tech. 2024)
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+[[file:images/stub.png]]
+***** Charan Kumar (M.Tech. 2024)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
-  Plane Wave Expansion (PWE) approaches for 3D frame structures with nonlinear joints.
-  
-  *Contact Details*
-  + *Email*: [[mailto:ae24m012@smail.iitm.ac.in][ae24m012@smail.iitm.ac.in]]
-  #+end_blurb
-#+end_picblurb
+Plane Wave Expansion (PWE) approaches for 3D frame structures with nonlinear joints.
 
-#+begin_picblurb
-  #+begin_pic
-  [[file:images/stub.png]]
-  #+end_pic
+*Contact Details*
++ *Email*: [[mailto:ae24m012@smail.iitm.ac.in][ae24m012@smail.iitm.ac.in]]
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+[[file:images/stub.png]]
+***** Sathyanarayana Reddy (M.Tech. 2024)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
-  #+begin_blurb
-  *Sathyanarayana Reddy* (M.Tech. 2024)
+Development of spline-based numerical continuation methods.
 
-  Development of spline-based numerical continuation methods.
-  
-  *Contact Details*
-  + *Email*: [[mailto:ae24m046@smail.iitm.ac.in][ae24m046@smail.iitm.ac.in]]
-  #+end_blurb
-#+end_picblurb
+*Contact Details*
++ *Email*: [[mailto:ae24m046@smail.iitm.ac.in][ae24m046@smail.iitm.ac.in]]
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+[[file:images/stub.png]]
+***** Dhanush M (M.Tech. 2024) 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
 
-#+begin_picblurb
-  #+begin_pic
-  [[file:images/stub.png]]
-  #+end_pic
-
-  #+begin_blurb
-  *Dhanush M* (M.Tech. 2024)
-
-  Development of Julia code for nonlinear vibration analysis.
-  
-  *Contact Details*
-  + *Email*: [[mailto:ae24m014@smail.iitm.ac.in][ae24m014@smail.iitm.ac.in]]
-  #+end_blurb
-#+end_picblurb
-#+end_picblurb-container
+Development of Julia code for nonlinear vibration analysis.
+ 
+*Contact Details*
++ *Email*: [[mailto:ae24m014@smail.iitm.ac.in][ae24m014@smail.iitm.ac.in]]
 
 ** Undergraduate Students
-#+begin_picblurb-container 
-#+begin_picblurb
-  #+begin_pic
-  [[file:images/stub.png]]
-  #+end_pic
 
-  #+begin_blurb
-  *Viswajit Ati* (B.Tech. 2022)
+*** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb-container
+:END:
 
-  Raspberry Pi-based platform for vibration testing.
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+[[file:images/stub.png]]
+
+***** Viswajit Ati (B.Tech. 2022)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+
+Raspberry Pi-based platform for vibration testing.
   
-  *Contact Details*
-  + *Email*: [[mailto:ae22b064@smail.iitm.ac.in][ae22b064@smail.iitm.ac.in]]
-  #+end_blurb
-#+end_picblurb  
-#+end_picblurb-container
+*Contact Details*
++ *Email*: [[mailto:ae22b064@smail.iitm.ac.in][ae22b064@smail.iitm.ac.in]]
 
 ** COMMENT Post Doctoral Researchers
 
@@ -1562,27 +1751,33 @@ _Links_
       height: 86px;
       content:"";
   }
-  
+
   .figure-number {
       display: none;
   }
-  
+
   /* Number the bibtex entries */
   .templates {
       counter-reset: bibtexentry; /* Create a counter called 'entry' and set it to 0 */
   }
-  
+
   .bibtexentry {
       counter-increment: bibtexentry; /* Increment the counter for each .entry */
       position: relative; /* For positioning the number */
   }
-  
+
   .bibtexentry::before {
       content: counter(bibtexentry) ". "; /* Add the counter value before the content of each .entry */
       position: absolute; /* Position the number relative to the .entry */
-      left: -30px; /* Adjust as needed */
+      left: -1.5vw; /* Adjust as needed */
       top: 0; /* Align with the top of the entry */
       font-weight: bold; /* Optional styling */
+  }
+
+  @media (max-width: 600px) {
+      .bibtexentry::before {
+  	left: -20px;
+      }
   }
 
   h3.orgbib {

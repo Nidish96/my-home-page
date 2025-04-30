@@ -955,6 +955,15 @@ p.verse {
   height: 95%; /* Ensures blurb takes up full card height */
 }
 
+.blurb h1,
+.blurb h2,
+.blurb h3,
+.blurb h4,
+.blurb h5,
+.blurb h6 {
+  margin: 0;
+}
+
 .picblurb .vpic {
   width: 20%; /* Fixed width for the picture */
   height: 100%; /* Occupies full height of the card */
@@ -972,10 +981,10 @@ p.verse {
 .vpic img {
  
    width: 95%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    padding-left: 1%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   padding-left: 1%;
 }
 
 /* Lightbox modal */
@@ -1032,6 +1041,7 @@ p.verse {
 
 .picblurb-container .picblurb {
     width: 25vw;
+    font: 70%;
 }
 
 .picblurb-container .picblurb .vpic {
@@ -1040,9 +1050,9 @@ p.verse {
 .picblurb-container .picblurb .pic {
     width: 40%;
 }
-.picblurb-container .picblurb .pic img {
-    width: 90%;
-}
+/* .picblurb-container .picblurb .pic img { */
+/*     width: 80%; */
+/* } */
 
 @media (max-width: 600px) {
     .lmargin, .rmargin {
@@ -1064,13 +1074,16 @@ p.verse {
     }
 
     .picblurb {
-        height: 13vh;
+	width: 90vw;
+        height: 15vh;
+	margin: auto;
     }
     
     .picblurb-container .picblurb {
-        width: 47vw;
-        height: 10vh;
+        width: 90vw;
+        height: 15vh;
         font-size: 70%;
+	margin-bottom: 2vh;
     }
 
     #bibtex_display {

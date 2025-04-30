@@ -433,7 +433,7 @@ function orgDefkey(e) {
 // document.onkeypress = orgDefkey;
 document.addEventListener('keypress', (e)=>orgDefkey(e))
 
-// Lightbox modal
+// Lightbox modal for picblurbs
 document.addEventListener("DOMContentLoaded", function () {
   // Get all elements with class "picblurb"
   const picblurbs = document.querySelectorAll(".picblurb");
@@ -466,6 +466,45 @@ window.onclick = function (event) {
 		modal.style.display = "none";
 	}
 }
+
+// Helpers for picblurbs
+							 
+document.querySelectorAll('.picblurb').forEach(el => {
+  // Keep only 'picblurb' on the parent
+  el.className = 'picblurb';
+
+  // Traverse all descendants
+  el.querySelectorAll('*').forEach(child => {
+    const toRemove = [];
+    
+    // Collect class names starting with 'outline-'
+    child.classList.forEach(className => {
+      if (className.startsWith('outline-')) {
+        toRemove.push(className);
+      }
+    });
+
+    // Remove only the matching classes
+    toRemove.forEach(cls => child.classList.remove(cls));
+  });
+});
+
+document.querySelectorAll('.picblurb-container').forEach(el => {
+  // Keep only 'picblurb-container' on the parent
+  el.className = 'picblurb-container';
+});
+
+document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(el => {
+  if (!el.textContent.trim()) {
+    el.remove();
+  }
+});
+
+document.querySelectorAll('div').forEach(div => {
+  if (div.innerHTML.trim() === '') {
+    div.remove();
+  }
+});
 
 // Responsive Tabs Update 
 function updateResponsiveTabs() {

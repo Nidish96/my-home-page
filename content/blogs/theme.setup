@@ -1,6 +1,6 @@
 # -*- mode: org; -*-
 
-#+OPTIONS: html-style:nil
+#+OPTIONS: html-style:nil h:6
 #+html_head: <link rel="stylesheet" type="text/css" href="../css/htmlize.css"/>
 #+html_head: <link rel="stylesheet" type="text/css" href="../css/bigblow.css"/>
 #+html_head: <link rel="stylesheet" type="text/css" href="../css/hideshow.css"/>
