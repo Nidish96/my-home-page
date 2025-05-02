@@ -4,6 +4,7 @@
 #+date: {{{time(%Y-%m-%d)}}}
 #+startup: indent
 #+html_head_extra: <style>body{font-size: 15px;}</style>
+#+html_head: <link rel="icon" type="image/x-icon" href="/favicon.ico">
 # #+html_head_extra: <meta name="viewport" content="width=1024">
 #+setupfile: ./theme.setup
 
@@ -43,33 +44,6 @@ Masters, and PhD) and scholars (for a Postdoc) who are fascinated by
 vibrations & dynamics and would like to try their hand out in
 research. Our door is always open to discuss research
 possibilities.
-
-You can have a look at the research tab to get a general sense of the
-types of projects we like to work on. However, we are not closed to
-suggestions for new topics/areas! :)
-
-** 
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: picblurb-container
-:END:
-
-*** 
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: picblurb
-:CUSTOM_ID: nidish
-:END:
-
-**** 
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: vpic
-:END:
-
-[[file:images/research/tdecomp.png]]
-
-**** Here is the blurb
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: blurb
-:END:
 
 You can have a look at the research tab to get a general sense of the
 types of projects we like to work on. However, we are not closed to

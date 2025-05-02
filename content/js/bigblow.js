@@ -500,9 +500,14 @@ document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(el => {
   }
 });
 
-document.querySelectorAll('div').forEach(div => {
-  if (div.innerHTML.trim() === '') {
-    div.remove();
+document.querySelectorAll('[class^="outline-text-"]').forEach(el => {
+  const isEmpty = ![...el.childNodes].some(node =>
+    node.nodeType === Node.ELEMENT_NODE ||
+    (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '')
+  );
+
+  if (isEmpty) {
+    el.remove();
   }
 });
 
