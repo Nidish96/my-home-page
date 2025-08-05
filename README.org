@@ -1,0 +1,21 @@
+#+title: A minimalistic emacs org-mode based research website with tabs
+
+This is a minimalistic template for research websites that one can use Emacs org-mode to maintain. Heavy inspiration has been taken from [[https://github.com/fniessen/org-html-themes][org-html-themes]] from Fabrice Niessen (specifically the bigblow theme).
+
+Other than this, several javascript and css packages are used to give desirable features ([[https://jquery.com/][jquery]], [[https://github.com/pcooksey/bibtex-js][bibtex-js]], etc.).
+
+* Quick Start
++ Just clone the repository and type "make" in your terminal!
++ Modify the following lines in =Makefile= by replacing "ae" with your server.
+  #+begin_src bash
+    rsync -rv public ae:~/
+    ssh ae 'chmod -R 755 ~/public'
+  #+end_src
+  + To keep things simple, the make based build process only writes to the server and does not remove any files.
+  + This way you can have multiple sites from different sources served from the same location in the server.
++ The file =index.org= inside the =./content/= directory is the main page. After the make process, the html file is written to =./public/= . This can be copied to the server to serve the site.
++ A list of publications is populated from a .bib (bibtex) file using [[https://github.com/pcooksey/bibtex-js][bibtex-js]]
+    
+
+* Declaration
++ This is primarily meant for personal use and comes with no guarantees of correctness or reliability. Use at your own risk!
