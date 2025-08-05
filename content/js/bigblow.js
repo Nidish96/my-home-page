@@ -349,26 +349,25 @@ $(function() {
 });
 
 function clickPreviousTab() {
-    var active = $('#content').tabs('option', 'active');
-    // Avoid going back to last tab
-    if (active == 0) return;
+  var active = $('#content').tabs('option', 'active');
+  var count = $('.outline-2').length;
+  $('#content').tabs('option', 'active', (active - 1)%count );
 
-    $('#content').tabs('option', 'active', active - 1);
-
-    // Set the location href
-    var href = $('#content div[aria-expanded=true]').attr('id');
-    document.location.hash = href;
-    $.scrollTo(0);
+  // Set the location href
+  var href = $('#content div[aria-expanded=true]').attr('id');
+  document.location.hash = href;
+  $.scrollTo(0);
 }
 
 function clickNextTab() {
-    var active = $('#content').tabs('option', 'active');
-    $('#content').tabs('option', 'active', active + 1);
+  var active = $('#content').tabs('option', 'active');
+  var count = $('.outline-2').length;
+  $('#content').tabs('option', 'active', (active + 1)%count );
 
-    // Set the location href
-    var href = $('#content div[aria-expanded=true]').attr('id');
-    document.location.hash = href;
-    $.scrollTo(0);
+  // Set the location href
+  var href = $('#content div[aria-expanded=true]').attr('id');
+  document.location.hash = href;
+  $.scrollTo(0);
 }
 
 function orgDefkey(e) {

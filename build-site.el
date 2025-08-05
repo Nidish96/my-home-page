@@ -22,6 +22,7 @@
 ;; 	       "./.packages/org-colored-text.el" t)
 
 (add-to-list 'load-path "./.packages")
+(add-to-list 'load-path "./extra-packages")
 
 ;; Load the publishing system
 (require 'ox-publish)
@@ -73,6 +74,8 @@
       org-ref-insert-cite-function (lambda () (org-cite-insert nil))
       )
 
+(setq org-latex-preview-process-default 'dvisvgm)
+
 ;; Define the publishing project
 (setq org-publish-project-alist
       (list
@@ -94,7 +97,7 @@
 	     :recursive t
 	     :base-directory "./content/"
 	     :publishing-directory "./public"
-	     :base-extension "css\\|js\\|svg\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|bib\\|ico\\|hdf\\|edp"
+	     :base-extension "css\\|js\\|svg\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|bib\\|ico\\|hdf\\|edp\\|stl"
 	     :publishing-function 'org-publish-attachment
 	     :exclude "ltximg/*"
 	     )

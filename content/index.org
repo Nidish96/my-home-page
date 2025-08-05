@@ -1,11 +1,11 @@
-#+title: Vibrations and Nonlinear Dynamics Laboratory, IIT-Madras
-#+subtitle: Lab Research Website
+#+title: Vibrations and Nonlinear Dynamics Research Group, IIT-Madras
+#+subtitle: Research Group Website
 #+author: Nidish Narayanaa Balaji
 #+date: {{{time(%Y-%m-%d)}}}
 #+startup: indent
 #+html_head_extra: <style>body{font-size: 15px;}</style>
-#+html_head: <link rel="icon" type="image/x-icon" href="/favicon.ico">
-# #+html_head_extra: <meta name="viewport" content="width=1024">
+# +html_head: <link rel="icon" type="image/x-icon" href="/favicon.ico">
+# +html_head_extra: <meta name="viewport" content="width=1024">
 #+setupfile: ./theme.setup
 
 #+html: <bibtex src="Publications.bib"></bibtex>
@@ -33,7 +33,7 @@ I'm still thinking of a nice logo for the lab - suggestions are welcome! :-)
 #+end_center
 #+end_lmargin
 
-Welcome to the website of the Vibrations and Nonlinear Dynamics Laboratory.
+Welcome to the website of the Vibrations and Nonlinear Dynamics Research Group.
 Our motto is simple:
 #+begin_center
 *If it oscillates, we'll study it!*
@@ -49,27 +49,29 @@ You can have a look at the research tab to get a general sense of the
 types of projects we like to work on. However, we are not closed to
 suggestions for new topics/areas! :)
 
-** Opportunities to Join the Lab (Dated: <2025-02-16 Sun>)
+** Opportunities to Join the Group (Dated: <2025-07-24 Thu>)
 
 I'm presently looking for
 
 + [[color:blue][Masters' Students]] (undergraduates will also be considered):
   1. *Development of higher order Shell Finite Elements.*
   2. *Building a nonlinear oscillator using analog electronics.*
-  3. *Implementation of Nonlinear Modal Analysis on a Finite Element Software.*
-  4. *Using fractal surface theory to quantify and localize surface damage from interferometric scans.* 
+  3. *Using fractal surface theory to quantify and localize surface damage from interferometric scans.*
+  4. *Modeling the dynamics of thin-walled hemispherical shells.*
+  5. *Development of a Nonlinear Modal Testing platform using NI cRIO with LabVIEW.*
 + [[color:blue][PhD Students]]:
   1. *Slow-fast decomposition of nonlinear dynamic responses for vibration monitoring and control*
   2. *Response Synthesis from Nonlinear Modal Analysis*
+  3. *Analytical Investigations of the Dynamics of Thin-Walled Structures*
 
 Please email me at [[mailto:nidish@iitm.ac.in][nidish@iitm.ac.in]] if you are interested.   
 
-#+begin_note
-*IITM Summer Fellowship Programme* \\
-The summer fellowship programme is currently accepting applications. This is open to 3/4th year undergrads and Master's students. The deadline is <2025-02-28 Fri>, please apply!
+# #+begin_note
+# *IITM Summer Fellowship Programme* \\
+# The summer fellowship programme is currently accepting applications. This is open to 3/4th year undergrads and Master's students. The deadline is <2025-02-28 Fri>, please apply!
 
-Here's the link: https://ssp.iitm.ac.in/summer-fellowship-registration
-#+end_note
+# Here's the link: https://ssp.iitm.ac.in/summer-fellowship-registration
+# #+end_note
 
 ** Useful Links
 + [[https://ssp.iitm.ac.in/summer-fellowship-registration][IITM-SFP]]: IITM's Summer research fellowship for Bachelors' &
@@ -79,622 +81,151 @@ Here's the link: https://ssp.iitm.ac.in/summer-fellowship-registration
 + [[https://nidish96.github.io/wavevib/#outline-container-org2ca0aa0][WaveVib]]: A MATLAB/OCTAVE toolbox for wave-based analysis of jointed 1D structures
 + [[https://nidish96.github.io/Abaqus4Joints/][Abaqus4Joints]]: An ABAQUS/MATLAB tutorial for jointed dynamics modeling
 
-** COMMENT Facilities
-To be Updated
+** Facilities
++ [[http://ae.iitm.ac.in:3001/][Inventory Management App]] (under testing)
 
-** Resources/Slides
-+ (<2025-01-07 Tue>) [[file:files/nidish_topics_7jan24.pdf][Project Topics for MTech Students]]
-+ (<2025-02-06 Thu>) [[file:files/outline_6feb2025.pdf][Outline Presentation at IIST, Thiruvananthapuram]]
+* Resources
+
+** Software Toolkits/Libraries
+
+*** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+[[file:images/software/rep1_SWPlan.png]]
+[[file:images/software/c_out.png]]
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+*WaveVib* is intended to be a set of OCTAVE/MATLAB routines that can be used to study wave-based linear and nonlinear structures. The main advantage with using this approach comes from the fact that the linear portions of the problem are represented without any approximation (unlike weighted residual or variational approaches). The interface supports both periodic as well as quasi-periodic steady state response regimes. Immediate use cases include jointed beams, trusses, frame structures, fluid-filled columns, rotordynamics, etc.
+
+Check out the github page [[https://nidish96.github.io/wavevib/#outline-container-org2ca0aa0][here]].
+** NI LabVIEW VIs for Experimental Vibrations 
+:PROPERTIES:
+:CUSTOM_ID: sec-NIVIs
+:END:
+The following are some NI LabVIEW VIs that I've packaged for doing basic modal testing using serial hardware; I use NI cDAQ chassis (9174, 9179). Please don't hesitate to reach out to me if something's unclear or if you'd like suggestions on building off of these VIs for specific research requirements. For each of the following, I'm providing links to both the VI project as well as a link to the .exe file at the bottom of the descriptions of each (click and scroll down). *Note that the executables can be run on Windows computers even without a LabVIEW license after installing just the [[https://www.ni.com/en/support/downloads/software-products/download.labview-runtime.html#559046][LabVIEW Runtime]] Engine. You also need to install [[https://www.ni.com/en/support/downloads/dataplugins/download.international-electrotechnical-commission-dataplugin-for-uff-58.html#403359][a UFF plugin]] for all the data exports to work properly.*
+
+I do not guarantee the correctness of any of these - if something is/looks wrong, don't hesitate to dive into the VI yourself and tell me! :)
+
+I recommend checking out [[https://github.com/sdypy/sdypy][sdypy]] for a very lean Python library for modal fitting, stabilization diagrams, etc. (also see [[https://github.com/sandialabs/sdynpy][sdynpy]]).
+
+*** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb-container
+:END:
+
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+[[file:images/software/Impact_Test_Front_Panel_Map_Configure.png]]
+
+***** VI for Impact Hammer Testing
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+
+*Impact Test (DAQmx)* is a VI template project from the [[https://www.ni.com/en-in/shop/product/labview-sound-and-vibration-toolkit.html][LabVIEW Sound and Vibration Toolkit]]. I have modified it by adding a PSD plot, fixing a functionality-breaking bug, and a few other minor improvements to my personal liking.
+
+You can use this VI for conducting impact hammer based modal tests. Waveforms are outputted as tdms files and FRFs are outputted as UFF files. The VI also provides basic postprocessing facilities such as data handling for different impact locations, FRF estimation (Mag-Phase, Coherence), Nyquist plot with cursor, etc.
+
+Read the (default) docs [[https://ae.iitm.ac.in/~nidish/misc/VIdocs/impacttest/Impact%20Test%20Documentation.html][here]].
+
+#+attr_html: :width 100%
+#+caption: First 6 modes of a square plate attached to the ground through a beam screwed to its center; measurements made with this VI.
+[[file:images/software/modes.gif]]
+
+****** Download Links
++ [[https://drive.google.com/drive/folders/1qDsn6IwCMeiYyoHQp2ATI35Sv46Io3KJ?usp=sharing][Download VI Project]]
++ [[https://drive.google.com/drive/folders/1ELnzrsGnHfHKCQTWLqtM2jp51pLuB5Mn?usp=sharing][Download Executable]]
+
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+
+[[file:images/software/randomfrffp0.png]]
+
+***** VI for Random FRF Testing (shaker-based)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+
+This *ShakerSynch Template* is built using a lot of the convenience features implemented in the *Impact Test (DAQmx)* VI, but also includes the possibility of providing random excitation through a single analog output channel. It supports specifying excitation as uniform random noise, Gaussian random noise, and multisine periodic random noise excitation. All the basic postprocessing from the *Impact Test (DAQmx)* template are also present here. The waveforms and FRFs are outputted in a similar fashion too. 
+
+The VI also implements a secant-based RMS controller that iteratively refines the excitation voltage so that the RMS value of any one chosen channel meets the specified target value.
+
+Read the docs [[https://ae.iitm.ac.in/~nidish/misc/VIdocs/randomfrf/ShakerSynchTemplate.html][here]].
+
+*This VI can be used as a template to build VIs for more specific applications with serial control*.
+
+#+attr_html: :width 100%
+#+caption: Using the VI for testing a tip-loaded Aluminum beam clamped at the other end.
+[[file:images/software/randomfrfsetup.jpg]]
+
+****** Download Links
++ [[https://drive.google.com/drive/folders/1NCNPbKJ6_dfFiwqIZPdBenfzkj4vks4I?usp=sharing][Download VI Project]]
++ [[https://drive.google.com/drive/folders/1yEzEZRDMnjaMo_x5ahxVxiN2BsOas8RC?usp=sharing][Download Executable]]  
+
   
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+[[file:images/software/stepsinefp0.png]]
+
+***** VI for Step Sine FRF Testing (shaker-based)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+
+This *Step Sine Testing* VI is built using the *ShakerSynch VI* as a template for conducting stepped sine FRF testing. This has much of the same features as the Shaker Synch VI including the secant-based serial control, basic postprocessing and plotting, data output features, etc.
+
+Due to the physics agnostic implementation of the secant control, the same VI can be used for conducting both force-controlled as well as response-controlled step sine tests (provided channels measuring both are present).
+
+Read the docs [[https://ae.iitm.ac.in/~nidish/misc/VIdocs/stepsine/StepSineDocumentation.html][here]].
+
+#+attr_html: :width 100%
+#+caption: Using the VI for testing a tip-loaded Aluminum beam clamped at the other end.
+[[file:images/software/stepsinesetup.jpg]]
+
+****** Download Links
++ [[https://drive.google.com/drive/folders/1mgK9sUdlvnOFvTxUu8JeopCo_douDqvq?usp=sharing][Download VI Project]]
++ [[https://drive.google.com/drive/folders/1gJasPHkQlcqT_VDmgBMnXF86wLxTRJmD?usp=sharing][Download Executable]]
+
+** Presentations
+
 *** Conference Talks
 + (<2025-02-01 Sat>) [[file:files/nafed_nnm_balaji.pdf][Proposal for Nonlinear Normal Modes in FEAST]], NAFED 08, IITH.
 + (<2025-02-11 Tue>) [[file:files/imac25_pnois.pdf][Nonlinear Modal Synthesis under Narrow-band Random Excitation]], IMAC 2025, Orlando, FL.
 + (<2025-02-12 Wed>) [[file:files/imac25_hystid.pdf][Epistemic Insights on Dry-Friction From Micro-Slip Measurements]], IMAC 2025, Orlando, FL.
 + (<2025-02-13 Thu>) [[file:files/imac25_linlof.pdf][Averaging-based Stability Certification for Harmonic Balance applied to Fold and Neimark-Sacker bifurcations]], IMAC 2025, Orlando, FL.
 
-* COMMENT Research
-:PROPERTIES:
-:CUSTOM_ID: sec-research
-:END:
-#+begin_lmargin
-#+attr_html: :style width:100%; :alt Stochastic process characteristics of machined surface
-#+name: roughsurf1
-[[#roughsurf][file:images/research/stochsurf.png]]
-#+attr_html: :style width:100%; :alt Time-decomposition into fast and slow components
-#+name: tsdec1
-[[#slowfast][file:images/research/tdecomp.png]]
-#+attr_html: :style width:100%; :alt Experimental setup for nonlinear modal test
-#+name: nlmtesting1
-[[#nlmtesting][file:images/research/rubbersetup.png]]
-#+attr_html: :style width:100%; :alt Forced response of self-excited frictional oscillator
-#+name: linlof1
-[[#linlof][file:images/research/phbresp.png]]
-#+attr_html: :style width:100%; :alt Stability eigenvalues map along response
-#+name: linlof2
-[[#linlof][file:images/research/phbevs.png]]
-#+attr_html: :style width:100%; :alt Flow of time in 2 dimensions
-#+name: qphyst1
-[[#qphyst][file:images/research/2dmarch.png]]
-#+attr_html: :style width:100%; :alt Geometrically nonlinear curved beam
-#+name: spident1
-[[#spident][file:images/research/cbmresp.png]]
-#+attr_html: :style width:100%; :alt Image from Yang et al. 2022
-#+name: deepdic1
-[[#deepdic][file:images/research/deepdic.png]]
-#+attr_html: :style width:100%; :alt Modal backbones along with first order Sobol' indices
-#+name: nonuniq1
-[[#nonuniq][file:images/research/nonuniq.png]]
-#+attr_html: :style width:100%; :alt Dissipation flux over a bolted joint interface
-#+name: tmdpce1
-[[#tmdpce][file:images/research/dflux.png]]
-#+attr_html: :style width:100%; :alt Amplitude dependent mode-shapes for a phenomenological model of a bolted joint
-#+name: rqnm1
-[[#rqnm][file:images/research/rqnm.png]]
-#+end_lmargin
-
-#+begin_rmargin
-#+attr_html: :style width:100%; :alt Dynamics of a three-bolted lap joint structure (Brake Reu$\ss$ Beam)
-#+name: tmdpce2
-[[#tmdpce][file:images/research/brb.png]]
-#+attr_html: :style width:100%; :alt FPE based response synthesis against experimental measurements
-#+name: randomexc1
-[[#randomexc][file:images/research/fpesynth.png]]
-#+attr_html: :style width:100%; :alt Geometrically nonlinear curved beam
-#+name: spident2
-[[#spident][file:images/research/cbm.jpg]]
-#+attr_html: :style width:100%; :alt Hysteretic measurements and predictions for frictional systems
-#+name: hystid1
-[[#hystid][file:images/research/hysts.png]]
-#+attr_html: :style width:100%; :alt Stability characteristics for a unilateral system computed using averaging
-#+name: avstab1
-[[#avstab][file:images/research/avstab.png]]
-#+attr_html: :style width:100%; :alt Wave-based description of jointed bar
-#+name: wbmmod1
-[[#wbmmod][file:images/research/wbm.png]]
-#+attr_html: :style width:100%; :alt AFT procedure for plane wave expansion
-#+name: wbmmod2
-[[#wbmmod][file:images/research/wbaft.png]]
-#+attr_html: :style width:100%; :alt Quasi-Periodic response of frictional system
-#+name: qphyst2
-[[#qphyst][file:images/research/qpresp.png]]
-#+attr_html: :style width:100%; :alt Evolution of surface over long term testing
-#+name: ltermw1
-[[#ltermw][file:images/research/roughovw.png]]
-#+attr_html: :style width:100%; :alt The whole joint representation
-#+name: hred1
-[[#hred][file:images/research/hred1.png]]
-#+attr_html: :style width:100%; :alt Interfacial remeshing ROM
-#+name: hred2
-[[#hred][file:images/research/hred2.png]]
-#+end_rmargin
-
-** Areas of Interest
-Technical interest revolves around *engineering applications of linear
-and nonlinear dynamics*. So far, the research has been focused
-primarily on problems arising in structuray dynamics.
-
-Some topical areas include:
-+ *Jointed Systems*
-  + Multi-Scale contact modeling for vibration applications
-  + Computational and Theoretical Techniques for Dissipative Dynamics
-  + Experimental methods for dissipative systems
-+ *Nonlinear Modal Analysis*
-  + Generalization of modal analysis for nonlinear systems
-  + Exploitation of such a framework for identification and modeling
-+ *Reduced Order Modeling*
-+ *System Identification*
-+ *Analytical Methods in Nonlinear Dynamics*
-  + Slow-Fast dynamic decomposition using Methods of Multiple Scales
-  + Singular perturbation approaches in general
-+ *Experimental Techniques*
-  + For nonlinear modal testing
-  + Video-based non-contact vibration measurements
-+ *Uncertainty Quantification and Propagation*
-  + Computational Techniques to supplement existing methods with UQ
-    capabilities 
-
-** Upcoming Projects
-
-The following is a (non-exhaustive) list of specific projects I plan
-to actively seek funding for in the short-term:
-
-*** Direct-Envelope Identification for Nearly Periodic Processes
-:PROPERTIES:
-:CUSTOM_ID: slowfast
-:END:
-
-In a lot of practical problems involving systems undergoing periodic
-or nearly periodic excitation/response, the response can be described
-as a periodic solution with a slowly evolving envelope. Some examples
-included gradual degradation of rotating systems, heat-induced
-property change in vibration machinery, mechanical joint degradation
-due to wear, laminar fluid-field excitation on bluff body (von Karman
-vortex streets), narrow-banded random excitation, etc. In all such
-situations, time-scale separability between *fastly evolving
-vibrations* and *slowly evolving envelopes* is readily possible.
-
-While vibratory systems need to be sampled higher than the Nyquist
-frequency (usually several times more), if all that one is interested
-in is health monitoring, it is sufficient to identify and track the
-envelope of the process. Being slowly evolving processes, it must be
-possible to sample these at much smaller intervals. The research
-question here is: _Knowing the periodicity properties of a system, can
-we reconstruct the vibration envelope using undersampled data?_
-
-_Links_
-+ [[tsdec1][(Image) A schematic view of time-scale decomposition.]]
-
-*** Time Scale Decomposition for Thermo-Mechanical Problems
-:PROPERTIES:
-:CUSTOM_ID: tsdec
-:END:
-
-A fundamental observation that can be made in thermo-mechanical
-vibration problems is that the *elastic/mechanical portion* of the
-problem is governed by a *hyperbolic* PDE that leads to
-oscillatory/harmonic solutions, while the *heat equation is parabolic*
-with considerably larger time constants.\\
-Application of time-scale decomposition is a promising framework for
-dealing with such coupled problems. For example in frictional systems,
-the vibration response will be accounted for by the fast dynamics and
-the energy dissipated as heat will be accounted for by slowly evolving
-envelopes. Thermal fluxes from the environment can also be considered
-under such a framework as having a direct influence on the
-vibrations.\\ 
-Mathematically this will be achieved by using a singular perturbation
-framework leading to harmonic balance for the vibrations and a first
-order system for the slow dynamics.
-
-_Links_
-+ [[tsdec1][(Image) A schematic view of time-scale decomposition.]]
-
-*** Stochastic Process Approaches For Predictive Constitutive and Damage Modeling of Rough Surfaces
-:PROPERTIES:
-:CUSTOM_ID: roughsurf
-:END:
-
-Modeling rough surfaces as stochastic processes has been shown to lead
-to scale-independent descriptions of rough surfaces. We argue here
-that if such parameters are scale independent and therefore "features"
-of the surface, it MUST be possible to relate characteristic
-constitutive quantities to these features.
-
-Furthermore, stochastic process models of surfaces seem to imply that
-one can write down a Stochastic Difference Equation (SDE) describing
-the structure of the surface features with length-scale being the
-independent variable. Preliminary studies in the literature indicate
-that this implies a "hierarchical" structure, with the largest
-length-scale features (read: macro-scale) influencing the intermediate
-scales (meso-scale) influencing the smallest scales (micro-scale
-roughness).
-
-With the pursuit of this project, I hope to develop a clearer
-description of the different scales in the description of a rough
-surface and their relative contributions to the overall ("macro")
-dynamics of a jointed system.
-
-_Links_
-+ [[roughsurf1][(Image) The 2D Structure (SF) and Auto-Correlation Functions (ACF) of a machined (milled) surface.]]
-
-*** Reduced Order Modeling of Structures with Frictional and Geometric Nonlinearities
-:PROPERTIES:
-:CUSTOM_ID: rom
-:END:
-
-In most applications involving frictional interfaces coupled to
-geometrically nonlinear sub-domains (panels riveted/bolted at its
-ends, etc.), it can be observed that the former are not geometrically
-nonlinear and latter (large displacement/strain) do not undergo
-contact under nominal operation. Therefore it makes sense to employ
-smooth reduced order modeling approaches (orthogonal polynomial
-projections, etc.) for the latter sub-domains and non-smooth
-approaches for the former sub-domain.
-
-It has been a standard observation that contact interfaces show
-non-trivial evolution wherefore employing smooth polynomial fields is
-not the best way to go. It is my impression that strategies based on
-adaptive mesh-refinement are perhaps the way to go to improve
-computational performance in contact problems. Unlike earlier studies,
-I hope to directly use the governing partial differential equations
-for conducting the mesh-refinements, rather than using a finely
-resolved finite element mesh as reference.
-
-_Links_
-+ (Images) [[hred1][Whole joint]] and [[hred2][mesh-coarsening]] reduced order representations for a jointed interface.
-
-*** Nonlinear Modal Testing as the Next Paradigm in Industrial Modal Analysis 
-:PROPERTIES:
-:CUSTOM_ID: nlmtesting
-:END:
-
-Nonlinear Modal Analysis has gradually started becoming reasonably
-mature in academic circles over the last two decades. Unlike linear
-modes, nonlinear modes allow characterization of modal characteristics
-(natural frequency, damping factor, mode-shape) as response-amplitude
-dependent features of the system. Substituting the employment of
-classical linear modal analysis in the industrial setting has all
-indications of being the next paradigm in the community.
-
-Computational and experimental advances have ensured that analysis as
-well as experimental characterization of nonlinear modes do not pose
-prohibitive expenses (as compared to conducting linear
-analyses/experiments) any longer. Since the scientific advances have
-matured, technology adoption is the next step. This research will
-involve the following aspects (which will ideally be achieved by at
-least 3 candidates):
-+ Implementation and validation of nonlinear modal solvers in
-  industrial finite-element software;
-+ Implementation and validation of nonlinear modal testing methods
-  (Phase Locked-Loops, Control-Based Continuation) for industrial test
-  cases;
-+ Addressing lingering theoretical questions pertaining to
-  mode-mixing, modal interference, etc.
-
-_Links_
-+ [[nlmtesting1][(Image) Experimental setup for nonlinear modal testing of a jointed
-  fixed-free beam.]] 
-  
-*** Wave-Expansion Modeling of Rotors, Frames, etc.
-:PROPERTIES:
-:CUSTOM_ID: wbmmod
-:END:
-
-We recently developed a suite of wave-based analysis tools (see [[https://nidish96.github.io/wavevib][here]]
-for a MATLAB/OCTAVE toolbox) that are generally applicable for
-periodic and quasi-periodic responses of 1D continuum structures. The
-main advantage here is that the approximations obtained are _spatially
-exact_, with errors coming only from the temporal (Fourier)
-approximations. This results in a computational approach that is
-*several orders of magnitude faster* than conventional techniques such
-as finite elements, etc., while assuring superior accuracy.
-
-We are looking to demonstrate the applicability of this method to
-+ Rotordynamic problems with nonlinear bearings, contact, etc.,
-+ Spatial frame structures with industrial applications.
-
-Theoretically, we are also trying to see if an averaging concept is
-applicable to analyze the stability of the resulting solutions. 
-
-_Links_
-+ Research to be conducted in collaboration with [[https://www.me.gatech.edu/faculty/leamy][Prof. Mike Leamy at
-  Georgia Tech]]. 
-+ [[wbmmod1][(Image) The wave-based description for a jointed bar]] and [[wbmmod2][(Image)
-  modified AFT procedure for this]].
-+ [[#wbmpaper][Entry on past work on this area]].
-
-** Ongoing Projects
-
-Here is a list of on-going projects at various stages of completion. 
-*** Neimark-Sacker Bifurcations in Forced-Self Excited Frictional Systems
-:PROPERTIES:
-:CUSTOM_ID: linlof
-:END:
-
-Self excitation is often observed in aeroelastic systems where the
-aerodynamic influences lead to energy being added into the sytem in a
-state-dependent fashion. The resulting instabilities are saturated, in
-practical applications, by mechanical contacts undergoing frictional
-dissipation. We develop a novel fully frequency domain approach for
-the bifurcation analysis of such systems. An imporant aspect of the
-approach here is that no theoretical conditions are violated for the
-stability analysis eventhough the systems are fundamentally non-smooth
-(dry friction modeled using non-smooth relationships). 
-
-_Links_
-+ Research conducted in collaboration with [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][Prof. Malte Krack at the
-  University of Stuttgart]].
-+ (Images) [[linlof1][Forced response]] and [[linlof2][eigenvalues of stability]] for a
-  self-excited oscillator with frictional supports showing the
-  periodic (main) and quasi-periodic branches.
-
-*** Application of Nonlinear Modal Methods for Narrow-Band Random Excitation
-:PROPERTIES:
-:CUSTOM_ID: randomexc
-:END:
-
-Thus far, nonlinear modal methods have found applications only in
-periodic response regimes. We are trying to understand the efficacy in
-random response regimes in this projects.
-
-The evolution of the slow envelope is written in terms of a Stochastic
-Differential Equation (SDE), and solving the corresponding Fokker
-Planck Equations (FPE) allows us to identify the diffusion of the
-probability density of the envelopes directly.
-
-_Links_
-+ Research conducted in collaboration with [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][Prof. Malte Krack at the
-  University of Stuttgart]]. 
-+ [[randomexc1][(Image) Comparison of synthesized responses and experimental measurements]]
-  for the system [[nlmtesting1][shown above]].  
-
-*** Identification of Micro-Slip Hysteretic Models from Frictional Response Measurements
-:PROPERTIES:
-:CUSTOM_ID: hystid
-:END:
-
-We deal with the fundamental problem of identifying hysteretic models
-that best fit measurements made from a tribometer developed at the
-University of Stuttgart. Although several models exist in the
-literature, robust identification poses several challenges due to
-epistemic issues characteristic of friciton modeling. 
-
-_Links_
-+ Research conducted in collaboration with [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][Prof. Malte Krack at the
-  University of Stuttgart]]. 
-+ [[hystid1][(Image) Example of measurements (blue) and identification (red).]]
-
-*** An Averaging Approach for the Stability of Periodic Responses
-:PROPERTIES:
-:CUSTOM_ID: avstab
-:END:
-
-Pursuing the spirit of the method of multiple scales and time-scale
-decomposition, we have shown that it is indeed possible to rigorously
-write down slow-time evolution equations for the Fourier coefficients
-of a nonlinear oscillator. Unlike classical Floquet theory which
-requires smoothness and is thereby inapplicable to frictional contact
-problems, the averaging approach has lesser theoretical constraints,
-making it more generally applicable. 
-
-_Links_
-+ Research conducted in collaboration with [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][Prof. Malte Krack at the
-  University of Stuttgart]]. 
-+ [[avstab1][(Image) Stability characteristics of a unilateral spring system
-  computed using the averaging approach.]]
-
-*** Modal Interactions in the Presence of Multiple Nonlinear Modes
-:PROPERTIES:
-:CUSTOM_ID: mmodes
-:END:
-
-Accounting for the coexistence of multiple nonlinear modes in a single
-response has been an enduring problem in the nonlinear modal analysis
-literature. It is becoming clear that ignoring multi-modal effects in
-system identification leads to several inconsistencies. We are
-conducting a theoretical analysis to understand this phenomenon
-better. 
-
-_Links_
-+ Research conducted in collaboration with [[https://scholar.google.com/citations?user=XRl1tHkAAAAJ&hl=en][Prof. D. Dane Quinn at the
-  University of Akron]].
-  
-** Past Research
-
-Here is a list of past research projects.
-*** Torus-Time Marching for the Evaluation of Hystereses Under Quasi-Periodic Responses
-:PROPERTIES:
-:CUSTOM_ID: qphyst
-:END:
-
-Hysteretic forces (specifically rate-independent laws) are often
-represented as differential relationships. Evaluation of these
-requires an incremental implementation based on discretizing the
-differential operators. For periodic response calculations (using
-Harmonic Balance, for instance), imposing periodicity as a constraint
-leads to an iterative implementation that is repeated until
-convergence. In this work we generalized this idea to the
-multi-frequency "quasi-periodic" case.
-
-_Links_
-+ Research conducted as part of PostDoc with [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][Prof. Malte Krack at the University of Stuttgart]].
-+ [[doi:10.1016/j.jsv.2024.118570][Link to paper]].
-+ [[qphyst1][(Image) Flow of time in 2 dimensions (torus coordinates)]] and [[qphyst2][QP
-  forced response of a frictional oscillator]]. 
-
-*** A Sparse Parameterized Identification Approach for Weakly Nonlinear Systems
-:PROPERTIES:
-:CUSTOM_ID: spident
-:END:
-
-Decoupling the dynamics of a weakly nonlinear oscillator into
-fast-varying dynamics and slowly-varying amplitudes leads to a
-theoretical framework referred to as quasi-linearization. When the
-amplitude is kept constant, the system dynamics ends up behaving in a
-linear manner. Conducting testing (forced response, for instance)
-while controlling the response amplitude (adjusting force
-appropriately) leads to fully linear responses. Repeating such tests
-for multiple amplitude levels has been shown to allow one to paint an
-accurate picture of the dynamics of the system.
-
-In this work, we used this framework to develop a novel transfer
-function identification methodology. The transfer function is
-dependent, apart from the $s$ parameter, also on the response
-amplitude. Solving the resulting problem using sparse regression leads
-to a computationally attractive system identification method for
-weakly non-linear systems. 
-
-_Links_
-+ Research conducted in collaboration with [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at Rice University]].
-+ [[spident2][(Image) A geometrically nonlinear beam used for the study]] and [[spident1][its
-  measured forced response]]. 
-
-*** Wave-Based Modeling for the Periodic Response and Stability Analysis of Jointed 1D Structures
-:PROPERTIES:
-:CUSTOM_ID: wbmpaper
-:END:
-
-In this work we developed a suite of techniques, based on wave
-propagation representations on 1D bars and beams, to analyse the
-periodic responses and stability of jointed 1D structures. The main
-advantage with the wave-based approach is that it is spatially exact
-and the approximations are introduced from the time-representation
-only. A semi-analytical approach based on singular perturbation and a
-numerical approach based on plane-wave expansions were formulated and
-applied.
-
-For stability analysis, a generalized strained-parameter approach
-using singular perturbations and a numerical approach based on sign
-changes in the determinant are proposed. It must be noted that these
-stability analysis approaches are capable of detecting simple
-bifurcations (fold-type, period-doubling) but will not work for
-Hopf-type bifurcations (Neimark-Sacker). A MATLAB/OCTAVE toolbox named
-[[https://nidish96.github.io/wavevib][WaveVib]] has been created based on this work, which is aimed to allow
-fast prototyping with a versatile "front-end". 
-
-_Links_
-+ Research conducted in collaboration with [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at Rice
-  University]] and [[https://www.me.gatech.edu/faculty/leamy][Prof. Mike Leamy at Georgia Tech]]. 
-+ [[wbmmod1][(Image) Wave based description]] and [[wbmmod2][the PWE-AFT procedure]].
-+ Links to paper: [[doi:10.1007/s11071-022-07765-0][Part-1]] and [[doi:10.1007/s11071-022-07969-4][Part-2]].
-
-*** A Deep Neural Network Approach for Experimental Modal Analysis Using Video Measurements
-:PROPERTIES:
-:CUSTOM_ID: deepdic
-:END:
-
-Digital Image Correlation (DIC) has emerged as the new standard in
-video-based vibration testing. In this work, we established, firstly,
-a framework for conducting Experimental Modal Analysis (EMA) using DIC
-measurements for a system under electrodynamic excitation. Although
-DIC provides full-field data, the main drawback holding it from
-wide-spread applicability is that post-processing is a rather
-expensive process. We therefore adapted (fine-tuned) an existing deep
-Convolutional Neural Network (CNN) to substitute the DIC computation
-in the EMA application and demonstrated that such Neural Networks can
-indeed substitute DIC, with some examples showing even a 15x increase
-in computational performance. 
-
-_Links_
-+ Research conducted as part of PostDoc with [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at
-  Rice University]].
-+ [[deepdic1][(Image) The CNN architecture used (from Yang et al. 2021)]].
-
-*** A Stochastic Approach for the Quantification of the Effects of Non-Unique Residual Tractions in Frictional Systems
-:PROPERTIES:
-:CUSTOM_ID: nonuniq
-:END:
-
-Frictional interfaces are classically known to be statically
-indeterminate under nominal loads (until the "slip limit"). For
-structures with multiple joints wherein the tangential restoring
-forces from one joint influences the normal loading conditions of
-another joint, this indeterminacy manifests in a very pronounced
-manner, making the system exhibit non-unique solutions. Employing a
-mathematical parameterization of this effect for the elastic
-dry-friction element, we analyzed this effect from a stochastic
-perspective (using PCE) in the context of other possible uncertainties
-in frictional joints. It was observed that the influence of this
-non-uniqueness is most pronounced in the micro-slip regime. 
-
-_Links_
-+ Research conducted in collaboration with [[https://scholar.google.com/citations?user=dFpmPD0AAAAJ&hl=en][Dr. Erhan Ferhatoglu]].
-+ [[nonuniq1][(Image) Modal backbones along with the computed first order Sobol'
-  indices]].
-+ *Paper under preparation.*
-  
-*** Long-Term Evolution of the Dynamics of Jointed Structures
-:PROPERTIES:
-:CUSTOM_ID: ltermw
-:END:
-
-Wear and friction related damage is a rather obvious expectation from
-mechanical joints. Capturing such phenomena quantitatively is,
-however, an enduring challenge in the joints community. We conducted a
-12-hour experimental campaign studying the evolution of the dynamics
-of a jointed system. Frequency response and hammer impact-based
-nonlinear modal tests were conducted to characterize the
-dynamics. Interferometry was used to obtain height maps of the
-interfaces to characterize roughness. Continuous periodic excitation
-was provided at a near-resonant condition to induce wear in the
-interface.
-
-_Links_
-+ The collected dataset is [[https://jointmechanics.org/index.php/Brb_lterm_multiscale21][hosted here]].
-+ Research conducted in collaboration with [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at Rice
-  University]] and [[https://home.norwich.edu/people/scott-smith-phd][Dr. Scott A. Smith at Norwich University]].
-+ [[doi:10.1007/978-3-031-04086-3_41][Conference paper]] presented at IMAC 2023.
-+ [[tmdpce2][(Image) The Brake-Reuss Beam used for the studies]].
-+ [[ltermw1][(Image) Evolution of selected regions of the interface over the campaign]].
-+ *Paper under review in MSSP.*
-  
-*** Multi-Scale Modeling of Bolted Joints with Uncerainty Quantification
-:PROPERTIES:
-:CUSTOM_ID: tmdpce
-:END:
-
-We applied a statistical rough contact approach to conduct predictive
-nonlinear modal analysis of a bolted structure and compared this
-against experimental measurements. Frequency accuracy within 5% and
-damping accuracy within 25% were achieved. We also employed
-*Polynomial Chaos Expansion* for uncertainty quantification. 
-
-_Links_
-+ Research conducted as part of PhD under [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at Rice University]].
-+ [[tmdpce2][(Image) The bolt-jointed benchmark used for the study]] and [[tmdpce1][predicted
-  dissipation fluxes over the interfaces at a nonlinear resonance
-  point]].
-+ [[https://repository.rice.edu/items/196c45a0-37f5-47ec-9988-7707513c1a7f][Link to PhD thesis]]: /"Dissipative Dynamics of Bolted Joints"/.
-+ [[https://scholarship.rice.edu/handle/1911/108297][Link to MS thesis]]: /"Multi-Scale Modeling in Bolted Interfaces"/.
-+ *Paper under preparation*.
-  
-*** Hyper-Reduction for Jointed Interfaces
-:PROPERTIES:
-:CUSTOM_ID: hred
-:END:
-
-Hyper-reduction in the context of Reduced Order Modeling (ROM) refers
-to the development of ROMs wherein the model evaluation can be
-conducted completely without transforming the system back to the Full
-Order Model (FOM). Most projection based ROMs require one to first
-transform the reduced Degrees-of-Freedoms (DoFs) to the FOM domain for
-the evaluation of nonlinear forces (interfacial friction, for
-instance). We developed two novel hyper-reduction approaches for
-interfacial reduction of jointed systems.
-
-The first technique is based on the so-called Spider
-elements/distributing coupling elements. These formulations are
-modified to be tailor-fit to flat interfaces and relevant constitutive
-models are also developed. The resulting "whole-joint model" provides
-a highly compressed representation of the original system, wherein the
-forces and moments on the "patches" represent specific traction
-distributions on the original interface. 
-
-The second technique is based on remeshing the interface and
-constructing the projection matrices in a manner that allows one to
-evaluate the nonlinear forces fully in the reduced mesh. The way we do
-this here is to evaluate the projection operators completely based on
-quadrature points of the reduced mesh. While this leads to a special
-left projector matrix for the vector of nonlinear forces, it
-completely avoids having to transform the system back to the original
-domain. 
-
-_Links_
-+ Research conducted as part of PhD under
-  [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at Rice University]] in collaboration with
-  [[https://www.ila.uni-stuttgart.de/en/institute/team/Krack/][Prof. Malte Krack at the University of Stuttgart]].
-+ (Images) [[hred1][Whole joint]] and [[hred2][mesh-coarsening]] reduced order
-  representations for a jointed interface.
-+ [[doi:10.1016/j.ymssp.2020.107249][Link to paper]].
-
-*** A Quasi-Static Generalization of Rayleigh Quotient Extremality for Nonlinear Modal Analysis
-:PROPERTIES:
-:CUSTOM_ID: rqnm
-:END:
-
-The most popular techniques for nonlinear modal analysis involve
-either transient shooting or Harmonic balance (which also involves
-transient evaluation). More recently quasi-static simulations, under
-certain assumptions, have been shown to lead to an approximate but
-efficient approach for nonlinear modal analysis. These were termed
-Quasi-Static Modal Analysis (QSMA) and have found applications in
-several practical examples.
-
-In this work we went back to linear vibration theory where linear
-modes are defined as the minimizers of Rayleigh quotients, which are
-quadratic functions of the states. For weakly nonlinear systems,
-making a near-quadratic assumption for a generalized Rayleigh quotient
-leads to a completely new concept of nonlinear modes. Here, we apply
-the principle of virtual work (since energy can't be defined
-consistently for dissipative systems) and obtain a set of quasi-static
-equations with a scalar constraint. The constraint introduces a
-Lagrange multiplier as an additional unknown, which is interpreted in
-congruence with linear vibrations (where $\lambda=\omega_n^2$).
-
-_Links_
-+ Research conducted as part of PhD under [[https://profiles.rice.edu/faculty/matthew-brake][Prof. Matthew Brake at Rice University]].
-+ [[rqnm1][(Image) Low and high amplitude mode-shapes of a phenomenological
-  model of a bolt-jointed system]].
-+ [[doi:10.1016/j.compstruc.2019.106184][Link to paper]].
+*** Miscellaneous Talks
++ (<2025-07-07 Mon>) [[file:~/Documents/Research/d_Experimental/ModalTesting/Slides/slides.html][Vibrations and Modal Testing Introductory Slides for High Schoolers]] (Delivered at [[https://www.indradhanuwaldorfschool.in/][Indradhanu Waldorf School]]).
++ (<2025-01-07 Tue>) [[file:files/nidish_topics_7jan24.pdf][Project Topics for MTech Students]]
++ (<2025-02-06 Thu>) [[file:files/outline_6feb2025.pdf][Outline Presentation at IIST, Thiruvananthapuram]]
   
 * Research
 :PROPERTIES:
@@ -1518,9 +1049,10 @@ _Links_
 :END:
 
 |-------+-----------+--------------------------------+--------------|
-| S.No. | Course ID | Title                          |   Term(s)    |
+| S.No. | Course ID | Title                          | Term(s)      |
 |-------+-----------+--------------------------------+--------------|
 |    1. | AS3020    | Aerospace Structures           | [[file:courses/as3020/as3020st_fall24.org][Jul-Nov 2024]] |
+|       |           |                                | [[file:courses/as3020/as3020st_fall25.org][Jun-Nov 2025]] |
 |    2. | AS2070    | Aerospace Structural Mechanics | [[file:courses/as2070/as2070_spring2025.org][Jan-May 2025]] |
 
 * Members
@@ -1579,6 +1111,70 @@ IIT-Madras since 2024.
 
 **                                                                  :ignore:
 + Applications welcome - [[mailto:nidish@iitm.ac.in][Just email me!]]
+** PhD Students
+*** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb-container
+:END:
+
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+[[file:images/personnel/Rojan.jpg]]
+
+***** Rojan Mathew (2025-)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+*(Scientist/Engineer, VSSC, ISRO)*
+Working on developing solvers for nonlinear modal analysis of general purpose finite element models.
+
+*Contact Details*
++ *Email*: [[mailto:ae25d018@smail.iitm.ac.in][ae25d018@smail.iitm.ac.in]]
++ *LinkedIn*: [[http://www.linkedin.com/in/rojan-mathew-03a28355]]
+
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+[[file:images/personnel/siwani.jpg]]
+
+***** Siwani Adhikari (2025-)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+
+Working on using slow-fast decomposition for the identification and
+control of nonlinear structural systems.
+
+*Contact Details*
++ *Email*: [[mailto:ae25d008@smail.iitm.ac.in][ae25d008@smail.iitm.ac.in]]
++ *LinkedIn*: https://in.linkedin.com/in/siwani-adhikari-600587114
+
+*Bio*
+Results-driven technologist with over ten years of experience in
+various domains of Finite Element Method (FEM) and load
+computation. My expertise encompasses a broad spectrum of products,
+including aircraft engines, wind turbines, HVAC systems, and
+healthcare technologies. I excel in communication and stakeholder
+management, leveraging my analytical skills to adopt a proactive,
+solution-oriented approach. This enables me to quickly adapt to new
+domains, including Python and data science applications for mechanical
+systems.My recent stint was with Baker Hughes as Senior Engineer
+evaluating combustion products for Gas Turbines (O&G industry).
+
+
 ** M.Tech. Students
 *** 
 :PROPERTIES:
@@ -1594,11 +1190,11 @@ IIT-Madras since 2024.
 :HTML_CONTAINER_CLASS: pic
 :END:
 [[file:images/stub.png]]
-***** Charan Kumar (M.Tech. 2024)
+***** Charan Kumar (2025-)
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: blurb
 :END:
-
+*(M.Tech. 2024)*
 Plane Wave Expansion (PWE) approaches for 3D frame structures with nonlinear joints.
 
 *Contact Details*
@@ -1611,16 +1207,17 @@ Plane Wave Expansion (PWE) approaches for 3D frame structures with nonlinear joi
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: pic
 :END:
-[[file:images/stub.png]]
-***** Sathyanarayana Reddy (M.Tech. 2024)
+[[file:images/personnel/dhanush.jpg]]
+***** Dhanush M (2025-)
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: blurb
 :END:
-
-Development of spline-based numerical continuation methods.
-
+*(M.Tech. 2024)*
+Resonance Tracking for Nonlinear Mechanical Systems With Serial Buffered Control
+ 
 *Contact Details*
-+ *Email*: [[mailto:ae24m046@smail.iitm.ac.in][ae24m046@smail.iitm.ac.in]]
++ *Email*: [[mailto:ae24m014@smail.iitm.ac.in][ae24m014@smail.iitm.ac.in]]
+
 **** 
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: picblurb
@@ -1629,17 +1226,16 @@ Development of spline-based numerical continuation methods.
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: pic
 :END:
-[[file:images/stub.png]]
-***** Dhanush M (M.Tech. 2024) 
+[[file:images/personnel/sathyanarayana.jpg]]
+***** Sathyanarayana Reddy (2025-)
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: blurb
 :END:
+*(M.Tech. 2024)*
+Development of spline-based numerical continuation methods.
 
-Development of Julia code for nonlinear vibration analysis.
- 
 *Contact Details*
-+ *Email*: [[mailto:ae24m014@smail.iitm.ac.in][ae24m014@smail.iitm.ac.in]]
-
++ *Email*: [[mailto:ae24m046@smail.iitm.ac.in][ae24m046@smail.iitm.ac.in]]
 ** Undergraduate Students
 
 *** 
@@ -1654,31 +1250,143 @@ Development of Julia code for nonlinear vibration analysis.
 
 ***** 
 :PROPERTIES:
+:HTML_CONTAINER_CLASS: vpic
+:END:
+[[file:images/personnel/pgb.jpg]]
+
+***** P.G.Bharadwaj (2025-)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+*(B.Tech 2023)*
+Working on unifying interpolatory projection and the CONCERTO technique for system identification from nonlinear forced response measurements.
+
+*Contact Details*
++ *Email*: [[mailto:ae23b115@smail.iitm.ac.in][ae23b115@smail.iitm.ac.in]]
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
 :HTML_CONTAINER_CLASS: pic
 :END:
 [[file:images/stub.png]]
 
-***** Viswajit Ati (B.Tech. 2022)
+***** Viswajit Ati (2025-)
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: blurb
 :END:
-
+*(B.Tech. 2022)*
 Raspberry Pi-based platform for vibration testing.
   
 *Contact Details*
 + *Email*: [[mailto:ae22b064@smail.iitm.ac.in][ae22b064@smail.iitm.ac.in]]
 
-** COMMENT Post Doctoral Researchers
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
 
-** COMMENT PhD Students
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+[[file:images/personnel/harsh.png]]
+
+***** Harsh Vardhan Jena (2025-)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+*(B.Tech. 2023)*
+Nonlinear dynamic investigations through analog electronic oscillator circuits.
+  
+*Contact Details*
++ *Email*: [[mailto:ae23b037@smail.iitm.ac.in][ae23b037@smail.iitm.ac.in]]
+
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+[[file:images/personnel/priyanka.png]]
+
+***** Priyanka Umasankar (2025-)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+*(B.Tech. 2023)*
+Nonlinear dynamic investigations through analog electronic oscillator circuits.
+  
+*Contact Details*
++ *Email*: [[mailto:ee23b060@smail.iitm.ac.in][ee23b060@smail.iitm.ac.in]]
+
+
+** Alumni  
+
+*** Interns
+
+**** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb-container
+:END:
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+****** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+[[file:images/stub.png]]
+
+****** *V. Vijayaraghavan (B.Tech 2023, IIST-TVM)*
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+Summer intern (2025), worked on using the averaged Lagrangian approach for slow-fast decomposition of nonlinear dynamical system.
+
+*Contact Details*
++ *Email*: [[mailto:tkvvijay2005@gmail.com][tkvvijay2005@gmail.com]]
+
+
+***** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: picblurb
+:END:
+
+****** 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: pic
+:END:
+[[file:images/stub.png]]
+
+****** *Jerald Jecinth (B.Tech 2022, NIT-T)*
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: blurb
+:END:
+Summer intern (2025), synthesized and 3D printed a UAV for experimental characterization. 
+
+*Contact Details*
++ *Email*: [[mailto:jeraldjecinth@gmail.com][jeraldjecinth@gmail.com]]
+
+** COMMENT Post Doctoral Researchers
 
 ** COMMENT MS Students
 
 ** COMMENT Under Graduate Students
 
-** COMMENT Alumni  
-
 * Footer Scripts                                                     :ignore:
+
+# For picblurb modal
+
 #+attr_html: :id modal
 #+begin_modal
 #+begin_modal-content
@@ -1710,7 +1418,39 @@ Raspberry Pi-based platform for vibration testing.
           strs[i].innerHTML = underlinedText;
       }
   }
-  window.onload = function () { underlinemyname(); };
+  // window.onload = function () { underlinemyname(); };
+
+  function runAfterBibtexPopulated() {
+    const targetNode = document.getElementById('bibtex_display');
+
+    // If the bibtex container exists, observe it for added nodes
+    if (targetNode) {
+      const config = { childList: true, subtree: true };
+
+      const callback = (mutationList, observer) => {
+        for (const mutation of mutationList) {
+          if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+            // Call your function once bibtex-js populates content
+            underlinemyname();
+
+            // Stop observing after the first run to avoid repeated calls
+            observer.disconnect();
+            break;
+          }
+        }
+      };
+
+      const observer = new MutationObserver(callback);
+      observer.observe(targetNode, config);
+    } else {
+      // Fallback: If bibtex container not found, call after full page load with delay
+      window.addEventListener('load', () => {
+        setTimeout(underlinemyname, 100);
+      });
+    }
+  }
+
+  runAfterBibtexPopulated();
 #+end_src
 
 #+begin_src inline-css
